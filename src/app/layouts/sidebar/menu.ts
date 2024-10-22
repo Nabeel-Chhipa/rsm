@@ -114,26 +114,6 @@ export const MENU: MenuItem[] = [
                 link: '/',
                 parentId: 8
             },
-            // {
-            //     id: 55,
-            //     label: 'MENUITEMS.APPS.LIST.AGENCIES',
-            //     parentId: 46,
-            //     isCollapsed: true,
-            //     subItems: [
-            //         {
-            //             id: 56,
-            //             label: 'MENUITEMS.APPS.LIST.LISTVIEW',
-            //             link: '/',
-            //             parentId: 55
-            //         },
-            //         {
-            //             id: 57,
-            //             label: 'MENUITEMS.APPS.LIST.OVERVIEW',
-            //             link: '/',
-            //             parentId: 55
-            //         },
-            //     ]
-            // },
         ]
     },
 

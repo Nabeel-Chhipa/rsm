@@ -6,11 +6,48 @@
     "DASHBOARD": {
       "TEXT": "Dashboards",
       "LIST": {
-        "ANALYTICS": "Analytics",
-        "CRM": "CRM",
-        "ECOMMERCE": "Ecommerce",
-        "LEARNING": "Learning",
-        "REALESTATE": "Real Estate"
+        "COMMUNITIES": "Communities",
+        "PROPERTIES": "Properties",
+        "VENDORS": "Vendors",
+        "BOOKINGS": "Bookings",
+        "PROJECTS": "Projects"
+      }
+    },
+    "CONTROLCENTER": {
+      "TEXT": "Control Center",
+      "LIST": {
+        "SIGN-ON": "Sign-on",
+        "LISTING": "Listing",
+        "PROPERTY": "Property",
+        "VENDOR": "Vendor",
+        "CITY": "City",
+        "TOWN": "Town",
+        "BANK": "Bank",
+        "BRANCH": "Branch",
+        "EXPENSE_HEAD": "Expense Head",
+        "TAGGING_WITH_PROPERTY_BASED_ON_ROLES": "tagging with property based on roles"
+      }
+    },
+    "BUILDING_SOCIETIES": {
+      "TEXT": "BUILDING & SOCIETIES",
+      "LIST": {
+        "DASHBOARD": "Dashboard",
+        "PROPERTY_MANAGEMENT": "Property Management",
+        "VENDOR_MANAGEMENT": "Vendor Management",
+        "INVOICING": "Invoicing",
+        "HELPDESK": "Helpdesk",
+        "HR": "HR",
+        "ACCOUNTING": "Accounting",
+        "REPAIR_MAINTENANCE": "Repair & Maintenance",
+        "INVENTORY": "Inventory",
+        "PARKING": "Parking",
+        "VISITORS": "Visitors",
+        "NOTICE_COMMUNICATION": "Notice & Communication",
+        "CUSTOMER_FEEDBACK": "Customer feedback",
+        "BOOKING": "Booking",
+        "SIGN-ON": "Sign-on",
+        "ROLE_TAGGING(STAFF_MANAGEMENT)": "Role Tagging (Staff Management)",
+        "PROPERTY_TAGGING(RESIDENT_MANAGEMENT)": "Property Tagging (Resident Management)"
       }
     },
     "APPS": {
