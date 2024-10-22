@@ -11,38 +11,244 @@ export const MENU: MenuItem[] = [
         label: 'MENUITEMS.DASHBOARD.TEXT',
         icon: 'ph-gauge',
         subItems: [
-            // {
-            //     id: 3,
-            //     label: 'MENUITEMS.DASHBOARD.LIST.ANALYTICS',
-            //     link: '/',
-            //     parentId: 2
-            // },
-            // {
-            //     id: 4,
-            //     label: 'MENUITEMS.DASHBOARD.LIST.CRM',
-            //     link: '/',
-            //     parentId: 2
-            // },
-            // {
-            //     id: 5,
-            //     label: 'MENUITEMS.DASHBOARD.LIST.ECOMMERCE',
-            //     link: '/',
-            //     parentId: 2
-            // },
-            // {
-            //     id: 6,
-            //     label: 'MENUITEMS.DASHBOARD.LIST.LEARNING',
-            //     link: '/',
-            //     parentId: 2
-            // },
+            {
+                id: 3,
+                label: 'MENUITEMS.DASHBOARD.LIST.COMMUNITIES',
+                link: '/',
+                parentId: 2
+            },
+            {
+                id: 4,
+                label: 'MENUITEMS.DASHBOARD.LIST.PROPERTIES',
+                link: '/',
+                parentId: 2
+            },
+            {
+                id: 5,
+                label: 'MENUITEMS.DASHBOARD.LIST.VENDORS',
+                link: '/',
+                parentId: 2
+            },
+            {
+                id: 6,
+                label: 'MENUITEMS.DASHBOARD.LIST.BOOKINGS',
+                link: '/',
+                parentId: 2
+            },
             {
                 id: 7,
-                label: 'MENUITEMS.DASHBOARD.LIST.REALESTATE',
+                label: 'MENUITEMS.DASHBOARD.LIST.PROJECTS',
                 link: '/',
                 parentId: 2
             }
         ]
     },
+
+    // Control Center
+
+    {
+        id: 8,
+        label: 'MENUITEMS.CONTROLCENTER.TEXT',
+        icon: 'ph-buildings',
+        // parentId: 8,
+        subItems: [
+            {
+                id: 9,
+                label: 'MENUITEMS.CONTROLCENTER.LIST.SIGN-ON',
+                link: '/',
+                parentId: 8
+            },
+            {
+                id: 10,
+                label: 'MENUITEMS.CONTROLCENTER.LIST.LISTING',
+                // parentId: 46,
+                isCollapsed: true,
+                subItems: [
+                    {
+                        id: 11,
+                        label: 'MENUITEMS.CONTROLCENTER.LIST.PROPERTY',
+                        link: '/',
+                        parentId: 10
+                    },
+                    {
+                        id: 12,
+                        label: 'MENUITEMS.CONTROLCENTER.LIST.VENDOR',
+                        link: '/',
+                        parentId: 10
+                    },
+                    {
+                        id: 13,
+                        label: 'MENUITEMS.CONTROLCENTER.LIST.CITY',
+                        link: '/',
+                        parentId: 10
+                    },
+                    {
+                        id: 14,
+                        label: 'MENUITEMS.CONTROLCENTER.LIST.TOWN',
+                        link: '/',
+                        parentId: 10
+                    },
+                    {
+                        id: 15,
+                        label: 'MENUITEMS.CONTROLCENTER.LIST.BANK',
+                        link: '/',
+                        parentId: 10
+                    },
+                    {
+                        id: 16,
+                        label: 'MENUITEMS.CONTROLCENTER.LIST.BRANCH',
+                        link: '/',
+                        parentId: 10
+                    },
+                    {
+                        id: 17,
+                        label: 'MENUITEMS.CONTROLCENTER.LIST.EXPENSE_HEAD',
+                        link: '/',
+                        parentId: 10
+                    },
+                ]
+            },
+            {
+                id: 18,
+                label: 'MENUITEMS.CONTROLCENTER.LIST.TAGGING_WITH_PROPERTY_BASED_ON_ROLES',
+                link: '/',
+                parentId: 8
+            },
+            // {
+            //     id: 55,
+            //     label: 'MENUITEMS.APPS.LIST.AGENCIES',
+            //     parentId: 46,
+            //     isCollapsed: true,
+            //     subItems: [
+            //         {
+            //             id: 56,
+            //             label: 'MENUITEMS.APPS.LIST.LISTVIEW',
+            //             link: '/',
+            //             parentId: 55
+            //         },
+            //         {
+            //             id: 57,
+            //             label: 'MENUITEMS.APPS.LIST.OVERVIEW',
+            //             link: '/',
+            //             parentId: 55
+            //         },
+            //     ]
+            // },
+        ]
+    },
+
+    // Building & Societies
+
+    {
+        id: 19,
+        label: 'MENUITEMS.BUILDING_SOCIETIES.TEXT',
+        icon: 'ph-gauge',
+        subItems: [
+            {
+                id: 20,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.DASHBOARD',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 21,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.PROPERTY_MANAGEMENT',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 22,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.VENDOR_MANAGEMENT',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 23,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.INVOICING',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 24,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.HELPDESK',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 25,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.HR',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 26,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.ACCOUNTING',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 27,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.REPAIR_MAINTENANCE',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 28,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.INVENTORY',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 29,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.PARKING',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 30,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.VISITORS',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 31,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.NOTICE_COMMUNICATION',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 32,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.CUSTOMER_FEEDBACK',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 33,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.BOOKING',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 34,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.SIGN-ON',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 35,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.ROLE_TAGGING(STAFF_MANAGEMENT)',
+                link: '/',
+                parentId: 19
+            },
+            {
+                id: 36,
+                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.PROPERTY_TAGGING(RESIDENT_MANAGEMENT)',
+                link: '/',
+                parentId: 19
+            },
+        ]
+    },
+
     // {
     //     id: 8,
     //     label: 'MENUITEMS.APPS.TEXT',
