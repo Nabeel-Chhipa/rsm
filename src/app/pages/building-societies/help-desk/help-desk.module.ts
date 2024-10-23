@@ -7,19 +7,15 @@ import { OverviewComponent } from './overview/overview.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 // Count To
 import { CountUpModule } from 'ngx-countup';
-
 // Flat Picker
 import { FlatpickrModule } from 'angularx-flatpickr';
-
 // Simplebar
 import { SimplebarAngularModule } from 'simplebar-angular';
-
 // bootstrap component
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 
 @NgModule({
   declarations: [
