@@ -151,7 +151,7 @@ export const MENU: MenuItem[] = [
             {
                 id: 24,
                 label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.HELPDESK',
-                link: '/',
+                link: '/building-societies/helpDesk/list',
                 parentId: 19
             },
             {

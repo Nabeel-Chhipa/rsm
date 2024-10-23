@@ -5,6 +5,9 @@ const routes: Routes = [
   {
     path: '', loadChildren: () => import('./dashboards/dashboards.module').then(m => m.DashboardsModule)
   },
+  {
+    path: 'building-societies', loadChildren: () => import('./building-societies/building-societies.module').then(m => m.BuildingSocietiesModule)
+  }
 ];
 
 @NgModule({
