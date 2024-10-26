@@ -145,7 +145,7 @@ export const MENU: MenuItem[] = [
             {
                 id: 23,
                 label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.INVOICING',
-                link: '/',
+                link: '/building-societies/invoicing/list',
                 parentId: 19
             },
             {

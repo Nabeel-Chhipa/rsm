@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'helpDesk',
     loadChildren: () => import('./help-desk/help-desk.module').then(m => m.HelpDeskModule)
+  },
+  {
+    path: 'invoicing',
+    loadChildren: () => import('./invoicing/invoicing.module').then(m => m.InvoicingModule)
   }
 ];
 
