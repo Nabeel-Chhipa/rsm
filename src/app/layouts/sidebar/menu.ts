@@ -6,43 +6,43 @@ export const MENU: MenuItem[] = [
         label: 'MENUITEMS.MENU.TEXT',
         isTitle: true
     },
-    {
-        id: 2,
-        label: 'MENUITEMS.DASHBOARD.TEXT',
-        icon: 'ph-gauge',
-        subItems: [
-            {
-                id: 3,
-                label: 'MENUITEMS.DASHBOARD.LIST.COMMUNITIES',
-                link: '/',
-                parentId: 2
-            },
-            {
-                id: 4,
-                label: 'MENUITEMS.DASHBOARD.LIST.PROPERTIES',
-                link: '/',
-                parentId: 2
-            },
-            {
-                id: 5,
-                label: 'MENUITEMS.DASHBOARD.LIST.VENDORS',
-                link: '/',
-                parentId: 2
-            },
-            {
-                id: 6,
-                label: 'MENUITEMS.DASHBOARD.LIST.BOOKINGS',
-                link: '/',
-                parentId: 2
-            },
-            {
-                id: 7,
-                label: 'MENUITEMS.DASHBOARD.LIST.PROJECTS',
-                link: '/',
-                parentId: 2
-            }
-        ]
-    },
+    // {
+    //     id: 2,
+    //     label: 'MENUITEMS.DASHBOARD.TEXT',
+    //     icon: 'ph-gauge',
+    //     subItems: [
+    //         {
+    //             id: 3,
+    //             label: 'MENUITEMS.DASHBOARD.LIST.COMMUNITIES',
+    //             link: '/',
+    //             parentId: 2
+    //         },
+    //         {
+    //             id: 4,
+    //             label: 'MENUITEMS.DASHBOARD.LIST.PROPERTIES',
+    //             link: '/',
+    //             parentId: 2
+    //         },
+    //         {
+    //             id: 5,
+    //             label: 'MENUITEMS.DASHBOARD.LIST.VENDORS',
+    //             link: '/',
+    //             parentId: 2
+    //         },
+    //         {
+    //             id: 6,
+    //             label: 'MENUITEMS.DASHBOARD.LIST.BOOKINGS',
+    //             link: '/',
+    //             parentId: 2
+    //         },
+    //         {
+    //             id: 7,
+    //             label: 'MENUITEMS.DASHBOARD.LIST.PROJECTS',
+    //             link: '/',
+    //             parentId: 2
+    //         }
+    //     ]
+    // },
 
     // Control Center
 
@@ -175,7 +175,7 @@ export const MENU: MenuItem[] = [
             {
                 id: 28,
                 label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.INVENTORY',
-                link: '/',
+                link: '/building-societies/inventory/items',
                 parentId: 19
             },
             {
