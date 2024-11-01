@@ -133,7 +133,7 @@ export const MENU: MenuItem[] = [
             {
                 id: 21,
                 label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.PROPERTY_MANAGEMENT',
-                link: '/',
+                link: '/building-societies/properties/',
                 parentId: 19
             },
             {

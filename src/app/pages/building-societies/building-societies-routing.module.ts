@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'inventory',
     loadChildren: () => import('./inventory/inventory.module').then(m => m.InventoryModule)
+  },
+  {
+    path: 'properties',
+    loadChildren: () => import('./property-management/property-management.module').then(m => m.PropertyManagementModule)
   }
 ];
 
