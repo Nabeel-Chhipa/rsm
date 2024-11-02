@@ -22,6 +22,18 @@ const routes: Routes = [
   {
     path: 'properties',
     loadChildren: () => import('./property-management/property-management.module').then(m => m.PropertyManagementModule)
+  },
+  {
+    path: 'feedback',
+    loadChildren: () => import('./customer-feedback/customer-feedback.module').then(m => m.CustomerFeedbackModule)
+  },
+  {
+    path: 'parking',
+    loadChildren: () => import('./parking/parking.module').then(m => m.ParkingModule)
+  },
+  {
+    path: 'visitors',
+    loadChildren: () => import('./visitors/visitors.module').then(m => m.VisitorsModule)
   }
 ];
 

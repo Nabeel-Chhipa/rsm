@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { BuildingSocietiesRoutingModule } from './building-societies-routing.module';
 
-
 @NgModule({
   declarations: [],
   imports: [

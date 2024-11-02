@@ -181,13 +181,13 @@ export const MENU: MenuItem[] = [
             {
                 id: 29,
                 label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.PARKING',
-                link: '/',
+                link: '/building-societies/parking',
                 parentId: 19
             },
             {
                 id: 30,
                 label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.VISITORS',
-                link: '/',
+                link: '/building-societies/visitors',
                 parentId: 19
             },
             {
@@ -199,7 +199,7 @@ export const MENU: MenuItem[] = [
             {
                 id: 32,
                 label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.CUSTOMER_FEEDBACK',
-                link: '/',
+                link: '/building-societies/feedback',
                 parentId: 19
             },
             {
