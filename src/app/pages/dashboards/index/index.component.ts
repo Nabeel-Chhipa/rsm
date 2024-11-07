@@ -5,6 +5,7 @@ import * as ApexCharts from 'apexcharts';
 import { Store } from '@ngrx/store';
 import { fetchfeedbackdataData, fetchpropertydataData, fetchrentproprtydataData, fetchsalepropertydataData } from 'src/app/store/RealEstate/realEstate.action';
 import { selectData, selectfeedData, selectrentData, selectsaleData } from 'src/app/store/RealEstate/realEstate-selector';
+import { fetchInvoiceData } from 'src/app/store/Invoices/invoices.action';
 
 @Component({
   selector: 'app-real-estate',
@@ -37,6 +38,7 @@ export class IndexComponent {
   currentDate: any;
   currentTab = 'sale';
 
+  invoiceCard: any;
 
   sortValue: any = 'Property Name'
 
@@ -88,6 +90,13 @@ export class IndexComponent {
     this.store.dispatch(fetchrentproprtydataData());
     this.store.select(selectrentData).subscribe((data) => {
       this.rentpropertyData = data;
+    });
+
+    // FETCH DATA FOR INVOICE CARDS
+
+    this.store.dispatch(fetchInvoiceData());
+    this.store.select(selectData).subscribe((data) => {
+      this.invoiceCard = data;
     });
 
   }

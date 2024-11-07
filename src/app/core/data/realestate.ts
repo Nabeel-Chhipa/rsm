@@ -103,7 +103,7 @@ const saleproperty = [
     {
         id: '1',
         img: 'assets/images/real-estate/img-08.jpg',
-        name: 'Crystal House',
+        name: 'Gym',
         bedroom: '2',
         bathroom: '1',
         sqft: '1039',
@@ -112,7 +112,7 @@ const saleproperty = [
     {
         id: '2',
         img: 'assets/images/real-estate/img-07.jpg',
-        name: 'Whitespace Vintage Villa',
+        name: 'Community Hall',
         bedroom: '4',
         bathroom: '2',
         sqft: '1145',
@@ -121,7 +121,7 @@ const saleproperty = [
     {
         id: '3',
         img: 'assets/images/real-estate/img-05.jpg',
-        name: 'Northlight Residency',
+        name: 'Mosque',
         bedroom: '3',
         bathroom: '3',
         sqft: '1859',
@@ -130,7 +130,7 @@ const saleproperty = [
     {
         id: '4',
         img: 'assets/images/real-estate/img-08.jpg',
-        name: 'Park Side Colonial',
+        name: 'Park',
         bedroom: '5',
         bathroom: '3',
         sqft: '5643',
@@ -139,7 +139,7 @@ const saleproperty = [
     {
         id: '5',
         img: 'assets/images/real-estate/img-04.jpg',
-        name: 'Marina Hill Vintage',
+        name: 'Food Court',
         bedroom: '4',
         bathroom: '3',
         sqft: '1963',
@@ -148,7 +148,7 @@ const saleproperty = [
     {
         id: '6',
         img: 'assets/images/real-estate/img-07.jpg',
-        name: 'Grand Cub Hotel',
+        name: 'Swimming Pool',
         bedroom: '3',
         bathroom: '1',
         sqft: '1543',
@@ -157,7 +157,7 @@ const saleproperty = [
     {
         id: '7',
         img: 'assets/images/real-estate/img-03.jpg',
-        name: 'Evergreen Villa with Residency',
+        name: 'School',
         bedroom: '5',
         bathroom: '3',
         sqft: '3652',
@@ -169,7 +169,7 @@ const rentproperty = [
     {
         id: '1',
         img: 'assets/images/real-estate/img-01.jpg',
-        name: 'Liberty Property',
+        name: 'School',
         bedroom: '1',
         bathroom: '1',
         sqft: '958',
@@ -178,7 +178,7 @@ const rentproperty = [
     {
         id: '2',
         img: 'assets/images/real-estate/img-02.jpg',
-        name: 'Duplex Square Valley',
+        name: 'Swimming Pool',
         bedroom: '3',
         bathroom: '2',
         sqft: '2659',
@@ -187,7 +187,7 @@ const rentproperty = [
     {
         id: '3',
         img: 'assets/images/real-estate/img-03.jpg',
-        name: "Small house on an autumn’s",
+        name: "Park",
         bedroom: '2',
         bathroom: '1',
         sqft: '2230',
@@ -196,7 +196,7 @@ const rentproperty = [
     {
         id: '4',
         img: 'assets/images/real-estate/img-07.jpg',
-        name: 'New Grand Hotel Room',
+        name: 'Food Court',
         bedroom: '3',
         bathroom: '2',
         sqft: '2785',

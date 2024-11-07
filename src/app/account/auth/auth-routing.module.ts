@@ -10,6 +10,7 @@ import { LockscreenComponent } from './lockscreen/lockscreen.component';
 import { LogoutComponent } from './logout/logout.component';
 import { SuccessMsgComponent } from './success-msg/success-msg.component';
 import { TwostepComponent } from './twostep/twostep.component';
+import { ProfileComponent } from '../../pages/extrapages/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -46,7 +47,7 @@ const routes: Routes = [
   },
   {
     path: 'errors', loadChildren: () => import('./errors/errors.module').then(m => m.ErrorsModule)
-  },
+  }
 ];
 
 @NgModule({

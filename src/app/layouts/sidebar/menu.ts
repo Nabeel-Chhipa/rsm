@@ -121,108 +121,102 @@ export const MENU: MenuItem[] = [
 
     {
         id: 19,
-        label: 'MENUITEMS.BUILDING_SOCIETIES.TEXT',
+        label: 'MENUITEMS.COMMUNITIES.TEXT',
         icon: 'ph-gauge',
         subItems: [
             {
                 id: 20,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.DASHBOARD',
-                link: '/',
+                label: 'MENUITEMS.COMMUNITIES.LIST.PROPERTY_MANAGEMENT',
+                link: '/communities/properties/',
                 parentId: 19
             },
             {
                 id: 21,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.PROPERTY_MANAGEMENT',
-                link: '/building-societies/properties/',
-                parentId: 19
-            },
-            {
-                id: 22,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.VENDOR_MANAGEMENT',
+                label: 'MENUITEMS.COMMUNITIES.LIST.VENDOR_MANAGEMENT',
                 link: '/',
                 parentId: 19
             },
             {
+                id: 22,
+                label: 'MENUITEMS.COMMUNITIES.LIST.INVOICING',
+                link: '/communities/invoicing/list',
+                parentId: 19
+            },
+            {
                 id: 23,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.INVOICING',
-                link: '/building-societies/invoicing/list',
+                label: 'MENUITEMS.COMMUNITIES.LIST.HELPDESK',
+                link: '/communities/helpDesk/list',
                 parentId: 19
             },
             {
                 id: 24,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.HELPDESK',
-                link: '/building-societies/helpDesk/list',
+                label: 'MENUITEMS.COMMUNITIES.LIST.HR',
+                link: '/',
                 parentId: 19
             },
             {
                 id: 25,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.HR',
+                label: 'MENUITEMS.COMMUNITIES.LIST.ACCOUNTING',
                 link: '/',
                 parentId: 19
             },
             {
                 id: 26,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.ACCOUNTING',
+                label: 'MENUITEMS.COMMUNITIES.LIST.REPAIR_MAINTENANCE',
                 link: '/',
                 parentId: 19
             },
             {
                 id: 27,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.REPAIR_MAINTENANCE',
-                link: '/',
+                label: 'MENUITEMS.COMMUNITIES.LIST.INVENTORY',
+                link: '/communities/inventory/items',
                 parentId: 19
             },
             {
                 id: 28,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.INVENTORY',
-                link: '/building-societies/inventory/items',
+                label: 'MENUITEMS.COMMUNITIES.LIST.PARKING',
+                link: '/communities/parking',
                 parentId: 19
             },
             {
                 id: 29,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.PARKING',
-                link: '/building-societies/parking',
+                label: 'MENUITEMS.COMMUNITIES.LIST.VISITORS',
+                link: '/communities/visitors',
                 parentId: 19
             },
             {
                 id: 30,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.VISITORS',
-                link: '/building-societies/visitors',
-                parentId: 19
-            },
-            {
-                id: 31,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.NOTICE_COMMUNICATION',
+                label: 'MENUITEMS.COMMUNITIES.LIST.NOTICE_COMMUNICATION',
                 link: '/',
                 parentId: 19
             },
             {
+                id: 31,
+                label: 'MENUITEMS.COMMUNITIES.LIST.CUSTOMER_FEEDBACK',
+                link: '/communities/feedback',
+                parentId: 19
+            },
+            {
                 id: 32,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.CUSTOMER_FEEDBACK',
-                link: '/building-societies/feedback',
+                label: 'MENUITEMS.COMMUNITIES.LIST.BOOKING',
+                link: '/communities/booking',
                 parentId: 19
             },
             {
                 id: 33,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.BOOKING',
+                label: 'MENUITEMS.COMMUNITIES.LIST.SIGN-ON',
                 link: '/',
                 parentId: 19
             },
             {
                 id: 34,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.SIGN-ON',
+                label: 'MENUITEMS.COMMUNITIES.LIST.ROLE_TAGGING(STAFF_MANAGEMENT)',
                 link: '/',
                 parentId: 19
             },
             {
                 id: 35,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.ROLE_TAGGING(STAFF_MANAGEMENT)',
-                link: '/',
-                parentId: 19
-            },
-            {
-                id: 36,
-                label: 'MENUITEMS.BUILDING_SOCIETIES.LIST.PROPERTY_TAGGING(RESIDENT_MANAGEMENT)',
+                label: 'MENUITEMS.COMMUNITIES.LIST.PROPERTY_TAGGING(RESIDENT_MANAGEMENT)',
                 link: '/',
                 parentId: 19
             },

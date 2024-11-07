@@ -6,7 +6,13 @@ const routes: Routes = [
     path: '', loadChildren: () => import('./dashboards/dashboards.module').then(m => m.DashboardsModule)
   },
   {
-    path: 'building-societies', loadChildren: () => import('./building-societies/building-societies.module').then(m => m.BuildingSocietiesModule)
+    path: 'communities', loadChildren: () => import('./communities/communities.module').then(m => m.CommunitiesModule)
+  },
+  {
+    path: 'profile', loadChildren: () => import('./extrapages/extrapages.module').then(m => m.ExtrapagesModule)
+  },
+  {
+    path: 'app', loadChildren: () => import('./apps/apps.module').then(m => m.AppsModule)
   }
 ];
 

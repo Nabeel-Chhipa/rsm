@@ -28,10 +28,9 @@
         "TAGGING_WITH_PROPERTY_BASED_ON_ROLES": "tagging with property based on roles"
       }
     },
-    "BUILDING_SOCIETIES": {
-      "TEXT": "BUILDING & SOCIETIES",
+    "COMMUNITIES": {
+      "TEXT": "COMMUNITIES",
       "LIST": {
-        "DASHBOARD": "Dashboard",
         "PROPERTY_MANAGEMENT": "Property Management",
         "VENDOR_MANAGEMENT": "Vendor Management",
         "INVOICING": "Invoicing",

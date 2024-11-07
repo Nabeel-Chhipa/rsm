@@ -33,7 +33,7 @@ import { TwostepComponent } from './twostep/twostep.component';
     CommonModule,
     AuthRoutingModule,
     ErrorsModule,
-    NgOtpInputModule
+    NgOtpInputModule,
   ]
 })
 export class AuthModule { }

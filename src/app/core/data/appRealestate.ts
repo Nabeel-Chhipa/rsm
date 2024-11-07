@@ -327,7 +327,7 @@ const estateList = [
         id: 6,
         type: "Villa",
         color: 'danger',
-        title: "Crystal House",
+        title: "Crystal House test",
         img: "assets/images/real-estate/img-06.jpg",
         imgalt: "img-06.jpg",
         location: "Guipuzcua, Spain",
