@@ -28,7 +28,7 @@ import { rootReducer } from './store';
 import { fakebackendInterceptor } from './core/helpers/fake-backend';
 import { ErrorInterceptor } from './core/helpers/error.interceptor';
 import { JwtInterceptor } from './core/helpers/jwt.interceptor';
-import { CRMEffects } from './store/CRM/crm.effects';
+import { ProjectsEffects } from './store/Projects/projects.effects';
 import { ECoEffects } from './store/Ecommerce/ecommerce.effects';
 import { LearningEffects } from './store/Learning/learning.effects';
 import { RealEffects } from './store/RealEstate/realEstate.effects';
@@ -76,7 +76,7 @@ if (environment.defaultauth === 'firebase') {
         }),
         EffectsModule.forRoot([
             AnalyticsEffects,
-            CRMEffects,
+            ProjectsEffects,
             ECoEffects,
             LearningEffects,
             RealEffects,

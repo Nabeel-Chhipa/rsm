@@ -3,13 +3,23 @@ import { RouterModule, Routes } from '@angular/router';
 
 // Component
 import { IndexComponent } from './index/index.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { BookingsComponent } from './bookings/bookings.component';
 
 
 const routes: Routes = [
   {
-    path: "",
+    path: "communities",
     component: IndexComponent
   },
+  {
+    path: "projects",
+    component: ProjectsComponent
+  },
+  {
+    path: "bookings",
+    component: BookingsComponent
+  }
 ];
 
 @NgModule({

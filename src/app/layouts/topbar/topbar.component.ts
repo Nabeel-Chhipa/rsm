@@ -347,4 +347,14 @@ export class TopbarComponent {
     // }
     this.router.navigate(['/auth/login']);
   }
+
+  gotoCommunities() {
+    this.router.navigate(['/communities'])
+  }
+  gotoProjects() {
+    this.router.navigate(['/projects'])
+  }
+  gotoBookings() {
+    this.router.navigate(['/bookings'])
+  }
 }

@@ -1,6 +1,6 @@
 import { ActionReducerMap } from "@ngrx/store";
 import { AnalyticsReducer, AnalyticsState } from "./Analytics/analytics.reducer";
-import { CRMReducer, CRMState } from "./CRM/crm.reducer";
+import { ProjectsReducer, ProjectsState } from "./Projects/projects.reducer";
 import { ECoReducer, ECoState } from "./Ecommerce/ecommerce.reducer";
 import { LearningReducer, LearningState } from "./Learning/learning.reducer";
 import { RealReducer, RealState } from "./RealEstate/realEstate.reducer";
@@ -25,7 +25,7 @@ export interface RootReducerState {
     layout: LayoutState,
     auth: AuthenticationState;
     statlist: AnalyticsState;
-    CRMlist: CRMState;
+    Projectslist: ProjectsState;
     Ecommercelist: ECoState;
     Learninglist: LearningState;
     Realist: RealState;
@@ -48,7 +48,7 @@ export interface RootReducerState {
 export const rootReducer: ActionReducerMap<RootReducerState> = {
     layout: layoutReducer,
     statlist: AnalyticsReducer,
-    CRMlist: CRMReducer,
+    Projectslist: ProjectsReducer,
     auth: authenticationReducer,
     Ecommercelist: ECoReducer,
     Learninglist: LearningReducer,

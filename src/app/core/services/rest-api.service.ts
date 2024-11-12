@@ -124,7 +124,7 @@ export class restApiService {
   }
 
   /**
-   * CRM Contect Rest Api
+   * Projects Contect Rest Api
    */
   // Get
   getContactData(): Observable<any> {
@@ -155,7 +155,7 @@ export class restApiService {
   }
 
   /**
-   * CRM Company Rest Api
+   * Projects Company Rest Api
    */
   // Get
   getCompanyData(): Observable<any> {
@@ -185,7 +185,7 @@ export class restApiService {
     return this.http.delete(GlobalComponent.API_URL + 'apps/company/' + id, {  headers: headerToken, responseType: 'text' });
   }
 
-  /* CRM Company Rest Api
+  /* Projects Company Rest Api
   */
   // Get
   getLeadData(): Observable<any> {

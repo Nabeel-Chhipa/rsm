@@ -21,7 +21,7 @@ export const MENU: MenuItem[] = [
             },
             {
                 id: 4,
-                label: 'MENUITEMS.DASHBOARD.LIST.CRM',
+                label: 'MENUITEMS.DASHBOARD.LIST.Projects',
                 link: '/',
                 parentId: 2
             },

@@ -1,5 +1,5 @@
 import { browserData, topPageData } from "./analytics";
-import { TableData, leadData, dealData, taskData } from "./CRM";
+import { TableData, leadData, dealData, taskData } from "./Projects";
 import { sales, orders, products } from "./ecommerce";
 import { instructor, recentcourse, instructorList } from "./learning";
 import { property, feedback, saleproperty, rentproperty } from "./realestate";

@@ -36,7 +36,7 @@ export class LoginComponent {
 
   ngOnInit(): void {
     if (localStorage.getItem('currentUser')) {
-      this.router.navigate(['/']);
+      this.router.navigate(['/communities']);
     }
     /**
      * Form Validatyion

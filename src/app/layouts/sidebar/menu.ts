@@ -64,18 +64,18 @@ export const MENU: MenuItem[] = [
                 // parentId: 46,
                 isCollapsed: true,
                 subItems: [
-                    {
-                        id: 11,
-                        label: 'MENUITEMS.CONTROLCENTER.LIST.PROPERTY',
-                        link: '/',
-                        parentId: 10
-                    },
-                    {
-                        id: 12,
-                        label: 'MENUITEMS.CONTROLCENTER.LIST.VENDOR',
-                        link: '/',
-                        parentId: 10
-                    },
+                    // {
+                    //     id: 11,
+                    //     label: 'MENUITEMS.CONTROLCENTER.LIST.PROPERTY',
+                    //     link: '/',
+                    //     parentId: 10
+                    // },
+                    // {
+                    //     id: 12,
+                    //     label: 'MENUITEMS.CONTROLCENTER.LIST.VENDOR',
+                    //     link: '/',
+                    //     parentId: 10
+                    // },
                     {
                         id: 13,
                         label: 'MENUITEMS.CONTROLCENTER.LIST.CITY',

@@ -8,7 +8,7 @@ import { selectData, selectfeedData, selectrentData, selectsaleData } from 'src/
 import { fetchInvoiceData } from 'src/app/store/Invoices/invoices.action';
 
 @Component({
-  selector: 'app-real-estate',
+  selector: 'app-index',
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.scss'],
   providers: [DecimalPipe]

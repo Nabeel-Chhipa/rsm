@@ -1,5 +1,5 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Page route
@@ -31,17 +31,43 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 // Leaflet map
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
+// Ck Editer
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+
+// dropzone
+import { DropzoneModule } from 'ngx-dropzone-wrapper';
+import { DROPZONE_CONFIG } from 'ngx-dropzone-wrapper';
+import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
+
+// Emoji Picker
+import { PickerModule } from '@ctrl/ngx-emoji-mart';
+
+// Calendar package
+import { FullCalendarModule } from '@fullcalendar/angular';
+
 // component
 import { IndexComponent } from './index/index.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { BookingsComponent } from './bookings/bookings.component';
+
+const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
+  // Change this to your upload POST address:
+  url: 'https://httpbin.org/post',
+  maxFilesize: 50,
+  acceptedFiles: 'image/*'
+};
 
 @NgModule({
   declarations: [
     IndexComponent,
+    ProjectsComponent,
+    BookingsComponent
   ],
   imports: [
     CommonModule,
     DashboardsRoutingModule,
     SharedModule,
+    FullCalendarModule,
     BsDropdownModule,
     CountUpModule,
     NgApexchartsModule,
@@ -53,11 +79,21 @@ import { IndexComponent } from './index/index.component';
     SimplebarAngularModule,
     ProgressbarModule.forRoot(),
     LeafletModule,
+    CKEditorModule,
+    DropzoneModule,
+    PickerModule,
     NgxEchartsModule.forRoot({ echarts }),
     ModalModule.forRoot(),
     BsDatepickerModule.forRoot(),
     FlatpickrModule.forRoot()
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [
+    DatePipe,
+    {
+      provide: DROPZONE_CONFIG,
+      useValue: DEFAULT_DROPZONE_CONFIG
+    }
+  ],
 })
 export class DashboardsModule { }
