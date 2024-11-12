@@ -357,4 +357,7 @@ export class TopbarComponent {
   gotoBookings() {
     this.router.navigate(['/bookings'])
   }
+  gotoVendors() {
+    this.router.navigate(['/vendors'])
+  }
 }

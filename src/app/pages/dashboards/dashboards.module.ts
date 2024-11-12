@@ -49,6 +49,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { IndexComponent } from './index/index.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BookingsComponent } from './bookings/bookings.component';
+import { VendorComponent } from './vendor/vendor.component';
 
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
   // Change this to your upload POST address:
@@ -61,7 +62,8 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
   declarations: [
     IndexComponent,
     ProjectsComponent,
-    BookingsComponent
+    BookingsComponent,
+    VendorComponent
   ],
   imports: [
     CommonModule,
