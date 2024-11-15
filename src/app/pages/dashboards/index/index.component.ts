@@ -6,6 +6,7 @@ import { Store } from '@ngrx/store';
 import { fetchfeedbackdataData, fetchpropertydataData, fetchrentproprtydataData, fetchsalepropertydataData } from 'src/app/store/RealEstate/realEstate.action';
 import { selectData, selectfeedData, selectrentData, selectsaleData } from 'src/app/store/RealEstate/realEstate-selector';
 import { fetchInvoiceData } from 'src/app/store/Invoices/invoices.action';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -43,7 +44,7 @@ export class IndexComponent {
   sortValue: any = 'Property Name'
 
 
-  constructor(public store: Store) {
+  constructor(public store: Store, public router: Router) {
     var date = new Date();
     var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
     var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
@@ -932,5 +933,9 @@ export class IndexComponent {
     } else {
       this.chart = new ApexCharts(document.querySelector(".apex-charts"), this.propetryrentChart);
     }
+  }
+
+  gotoCustomerFeedback() {
+    this.router.navigate(['/communities/feedback'])
   }
 }

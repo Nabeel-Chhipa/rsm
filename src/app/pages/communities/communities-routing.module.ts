@@ -38,6 +38,18 @@ const routes: Routes = [
   {
     path: 'booking',
     loadChildren: () => import('./booking/booking.module').then(m => m.BookingModule)
+  },
+  {
+    path: 'accounting',
+    loadChildren: () => import('./accounting/accounting.module').then(m => m.AccountingModule)
+  },
+  {
+    path: 'hr',
+    loadChildren: () => import('./hr/hr.module').then(m => m.HrModule)
+  },
+  {
+    path: 'vendors',
+    loadChildren: () => import('./vendor-management/vendor-management.module').then(m => m.VendorManagementModule)
   }
 ];
 

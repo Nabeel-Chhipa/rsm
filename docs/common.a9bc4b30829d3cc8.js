@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrsm=self.webpackChunkrsm||[]).push([[76],{5536:(l,n,e)=>{e.d(n,{fd:()=>c});var a=e(9640);const s=(0,a.UX)("Apprealestate"),c=(0,a.Mz)(s,t=>t.listingGridData);(0,a.Mz)(s,t=>t.listinglistData),(0,a.Mz)(s,t=>t.earningdata),(0,a.Mz)(s,t=>t.loading),(0,a.Mz)(s,t=>t.error)}}]);

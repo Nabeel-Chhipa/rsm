@@ -133,7 +133,7 @@ export const MENU: MenuItem[] = [
             {
                 id: 21,
                 label: 'MENUITEMS.COMMUNITIES.LIST.VENDOR_MANAGEMENT',
-                link: '/',
+                link: '/communities/vendors',
                 parentId: 19
             },
             {
@@ -151,13 +151,13 @@ export const MENU: MenuItem[] = [
             {
                 id: 24,
                 label: 'MENUITEMS.COMMUNITIES.LIST.HR',
-                link: '/',
+                link: '/communities/hr',
                 parentId: 19
             },
             {
                 id: 25,
                 label: 'MENUITEMS.COMMUNITIES.LIST.ACCOUNTING',
-                link: '/',
+                link: '/communities/accounting',
                 parentId: 19
             },
             {
