@@ -49,6 +49,58 @@
         "PROPERTY_TAGGING(RESIDENT_MANAGEMENT)": "Property Tagging (Resident Management)"
       }
     },
+    "PEOPLE": {
+      "TEXT": "PEOPLE",
+      "LIST": {
+        "STAFF": "Staff",
+        "RESIDENT": "Resident",
+        "USERS": "Users"
+      }
+    },
+    "FINANCE": {
+      "TEXT": "FINANCE",
+      "LIST": {
+        "PAYABLE": "Payable",
+        "RECEIVABLE": "Receivable",
+        "INVOICES": "Invoices",
+        "PURCHASE_REQUESTS": "Purchase Requests",
+        "PURCHASE_ORDERS": "Purchase Orders",
+        "BANK": "Bank",
+        "USERSMAINTENANCE_EXPENSES": "Maintenance Expenses"
+      }
+    },
+    "UTILITIES": {
+      "TEXT": "UTILITIES",
+      "LIST": {
+        "PARKING": "Parking",
+        "FACILITIES": "Facilities",
+        "VISITORS": "Visitors",
+        "SECURITY": "Security",
+        "COMMUNICATIONS": "Communications"
+      }
+    },
+    "SUPPORT": {
+      "TEXT": "Support",
+      "LIST": {
+        "TICKETS": "Tickets"
+      }
+    },
+    "ADMIN": {
+      "TEXT": "Admin",
+      "LIST": {
+        "COMMUNITIES": "Communities",
+        "PROPERTIES": "Properties",
+        "PROJECTS": "Projects",
+        "ACCESS_CONTROL": "Access Control"
+      }
+    },
+    "REPORTS_ANALYTICS": {
+      "TEXT": "Reports & Analytics",
+      "LIST": {
+        "REPORTS": "Reports",
+        "ANALYTICS": "Analytics"
+      }
+    },
     "APPS": {
       "TEXT": "Apps",
       "LIST": {

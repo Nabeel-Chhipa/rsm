@@ -117,7 +117,7 @@ export const MENU: MenuItem[] = [
         ]
     },
 
-    // Building & Societies
+    // Communities
 
     {
         id: 19,
@@ -220,6 +220,198 @@ export const MENU: MenuItem[] = [
                 link: '/',
                 parentId: 19
             },
+        ]
+    },
+    
+    // People
+
+    {
+        id: 20,
+        label: 'MENUITEMS.PEOPLE.TEXT',
+        icon: 'ph-gauge',
+        subItems: [
+            {
+                id: 36,
+                label: 'MENUITEMS.PEOPLE.LIST.STAFF',
+                link: '/people/staff',
+                parentId: 20
+            },
+            {
+                id: 37,
+                label: 'MENUITEMS.PEOPLE.LIST.RESIDENT',
+                link: '/people/resident',
+                parentId: 20
+            },
+            {
+                id: 38,
+                label: 'MENUITEMS.PEOPLE.LIST.USERS',
+                link: '/people/users',
+                parentId: 20
+            }
+        ]
+    },
+
+    // Finance
+
+    {
+        id: 21,
+        label: 'MENUITEMS.FINANCE.TEXT',
+        icon: 'ph-gauge',
+        subItems: [
+            {
+                id: 39,
+                label: 'MENUITEMS.FINANCE.LIST.PAYABLE',
+                link: '/',
+                parentId: 21
+            },
+            {
+                id: 40,
+                label: 'MENUITEMS.FINANCE.LIST.RECEIVABLE',
+                link: '/',
+                parentId: 21
+            },
+            {
+                id: 41,
+                label: 'MENUITEMS.FINANCE.LIST.INVOICES',
+                link: '/',
+                parentId: 21
+            },
+            {
+                id: 42,
+                label: 'MENUITEMS.FINANCE.LIST.PURCHASE_REQUESTS',
+                link: '/',
+                parentId: 21
+            },
+            {
+                id: 43,
+                label: 'MENUITEMS.FINANCE.LIST.PURCHASE_ORDERS',
+                link: '/',
+                parentId: 21
+            },
+            {
+                id: 44,
+                label: 'MENUITEMS.FINANCE.LIST.BANK',
+                link: '/',
+                parentId: 21
+            },
+            {
+                id: 45,
+                label: 'MENUITEMS.FINANCE.LIST.USERSMAINTENANCE_EXPENSES',
+                link: '/',
+                parentId: 21
+            }
+        ]
+    },
+
+    // Utilities
+
+    {
+        id: 22,
+        label: 'MENUITEMS.UTILITIES.TEXT',
+        icon: 'ph-gauge',
+        subItems: [
+            {
+                id: 46,
+                label: 'MENUITEMS.UTILITIES.LIST.PARKING',
+                link: '/communities/parking',
+                parentId: 22
+            },
+            {
+                id: 47,
+                label: 'MENUITEMS.UTILITIES.LIST.FACILITIES',
+                link: '/',
+                parentId: 22
+            },
+            {
+                id: 48,
+                label: 'MENUITEMS.UTILITIES.LIST.VISITORS',
+                link: '/communities/visitors',
+                parentId: 22
+            },
+            {
+                id: 49,
+                label: 'MENUITEMS.UTILITIES.LIST.SECURITY',
+                link: '/',
+                parentId: 22
+            },
+            {
+                id: 50,
+                label: 'MENUITEMS.UTILITIES.LIST.COMMUNICATIONS',
+                link: '/',
+                parentId: 22
+            }
+        ]
+    },
+
+    // Support
+
+    {
+        id: 23,
+        label: 'MENUITEMS.SUPPORT.TEXT',
+        icon: 'ph-gauge',
+        subItems: [
+            {
+                id: 51,
+                label: 'MENUITEMS.SUPPORT.LIST.TICKETS',
+                link: '/communities/helpDesk/list',
+                parentId: 23
+            }
+        ]
+    },
+
+    // Admin
+
+    {
+        id: 24,
+        label: 'MENUITEMS.ADMIN.TEXT',
+        icon: 'ph-gauge',
+        subItems: [
+            {
+                id: 52,
+                label: 'MENUITEMS.ADMIN.LIST.COMMUNITIES',
+                link: '/communities',
+                parentId: 24
+            },
+            {
+                id: 53,
+                label: 'MENUITEMS.ADMIN.LIST.PROPERTIES',
+                link: '/communities',
+                parentId: 24
+            },
+            {
+                id: 54,
+                label: 'MENUITEMS.ADMIN.LIST.PROJECTS',
+                link: '/',
+                parentId: 24
+            },
+            {
+                id: 55,
+                label: 'MENUITEMS.ADMIN.LIST.ACCESS_CONTROL',
+                link: '/',
+                parentId: 24
+            },
+        ]
+    },
+
+    // Reports & Analytics
+
+    {
+        id: 25,
+        label: 'MENUITEMS.REPORTS_ANALYTICS.TEXT',
+        icon: 'ph-gauge',
+        subItems: [
+            {
+                id: 56,
+                label: 'MENUITEMS.REPORTS_ANALYTICS.LIST.REPORTS',
+                link: '/',
+                parentId: 25
+            },
+            {
+                id: 57,
+                label: 'MENUITEMS.REPORTS_ANALYTICS.LIST.ANALYTICS',
+                link: '/',
+                parentId: 25
+            }
         ]
     },
 

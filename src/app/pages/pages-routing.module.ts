@@ -13,6 +13,9 @@ const routes: Routes = [
   },
   {
     path: 'app', loadChildren: () => import('./apps/apps.module').then(m => m.AppsModule)
+  },
+  {
+    path: 'people', loadChildren: () => import('./people/people.module').then(m => m.PeopleModule)
   }
 ];
 
