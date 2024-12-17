@@ -10,8 +10,12 @@ import { VendorComponent } from './vendor/vendor.component';
 
 const routes: Routes = [
   {
+    path: "",
+    component: IndexComponent,
+  },
+  {
     path: "communities",
-    component: IndexComponent
+    component: IndexComponent,
   },
   {
     path: "projects",

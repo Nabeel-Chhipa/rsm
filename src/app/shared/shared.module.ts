@@ -3,14 +3,19 @@ import { CommonModule } from '@angular/common';
 
 // component
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { PropertyOverviewComponent } from './property-overview/property-overview.component';
 
 @NgModule({
   declarations: [
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    PropertyOverviewComponent
   ],
   imports: [
     CommonModule
   ],
-  exports: [BreadcrumbsComponent]
+  exports: [
+    BreadcrumbsComponent,
+    PropertyOverviewComponent
+  ]
 })
 export class SharedModule { }

@@ -50,6 +50,14 @@ const routes: Routes = [
   {
     path: 'vendors',
     loadChildren: () => import('./vendor-management/vendor-management.module').then(m => m.VendorManagementModule)
+  },
+  {
+    path: 'resident',
+    loadChildren: () => import('./resident-management/resident-management.module').then(m => m.ResidentManagementModule)
+  },
+  {
+    path: 'add-communities',
+    loadChildren: () => import('./add-communities/add-communities.module').then(m => m.AddCommunitiesModule)
   }
 ];
 

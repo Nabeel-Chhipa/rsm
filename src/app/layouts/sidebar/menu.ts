@@ -47,178 +47,148 @@ export const MENU: MenuItem[] = [
     // Control Center
 
     {
-        id: 8,
+        id: 2,
         label: 'MENUITEMS.CONTROLCENTER.TEXT',
         icon: 'ph-buildings',
         // parentId: 8,
         subItems: [
+            // {
+            //     id: 3,
+            //     label: 'MENUITEMS.CONTROLCENTER.LIST.SIGN-ON',
+            //     link: '/',
+            //     parentId: 2
+            // },
             {
-                id: 9,
-                label: 'MENUITEMS.CONTROLCENTER.LIST.SIGN-ON',
-                link: '/',
-                parentId: 8
-            },
-            {
-                id: 10,
+                id: 4,
                 label: 'MENUITEMS.CONTROLCENTER.LIST.LISTING',
                 // parentId: 46,
                 isCollapsed: true,
                 subItems: [
-                    // {
-                    //     id: 11,
-                    //     label: 'MENUITEMS.CONTROLCENTER.LIST.PROPERTY',
-                    //     link: '/',
-                    //     parentId: 10
-                    // },
-                    // {
-                    //     id: 12,
-                    //     label: 'MENUITEMS.CONTROLCENTER.LIST.VENDOR',
-                    //     link: '/',
-                    //     parentId: 10
-                    // },
                     {
-                        id: 13,
+                        id: 5,
                         label: 'MENUITEMS.CONTROLCENTER.LIST.CITY',
                         link: '/',
-                        parentId: 10
+                        parentId: 4
                     },
                     {
-                        id: 14,
+                        id: 6,
                         label: 'MENUITEMS.CONTROLCENTER.LIST.TOWN',
                         link: '/',
-                        parentId: 10
-                    },
-                    {
-                        id: 15,
-                        label: 'MENUITEMS.CONTROLCENTER.LIST.BANK',
-                        link: '/',
-                        parentId: 10
-                    },
-                    {
-                        id: 16,
-                        label: 'MENUITEMS.CONTROLCENTER.LIST.BRANCH',
-                        link: '/',
-                        parentId: 10
-                    },
-                    {
-                        id: 17,
-                        label: 'MENUITEMS.CONTROLCENTER.LIST.EXPENSE_HEAD',
-                        link: '/',
-                        parentId: 10
+                        parentId: 4
                     },
                 ]
             },
-            {
-                id: 18,
-                label: 'MENUITEMS.CONTROLCENTER.LIST.TAGGING_WITH_PROPERTY_BASED_ON_ROLES',
-                link: '/',
-                parentId: 8
-            },
+            // {
+            //     id: 7,
+            //     label: 'MENUITEMS.CONTROLCENTER.LIST.TAGGING_WITH_PROPERTY_BASED_ON_ROLES',
+            //     link: '/',
+            //     parentId: 2
+            // },
         ]
     },
 
     // Communities
 
     {
-        id: 19,
+        id: 8,
         label: 'MENUITEMS.COMMUNITIES.TEXT',
         icon: 'ph-gauge',
         subItems: [
             {
-                id: 20,
+                id: 9,
                 label: 'MENUITEMS.COMMUNITIES.LIST.PROPERTY_MANAGEMENT',
                 link: '/communities/properties/',
-                parentId: 19
+                parentId: 8
+            },
+            {
+                id: 10,
+                label: 'MENUITEMS.COMMUNITIES.LIST.VENDOR_MANAGEMENT',
+                link: '/communities/vendors',
+                parentId: 8
+            },
+            {
+                id: 11,
+                label: 'MENUITEMS.COMMUNITIES.LIST.INVOICING',
+                link: '/communities/invoicing/list',
+                parentId: 8
+            },
+            {
+                id: 12,
+                label: 'MENUITEMS.COMMUNITIES.LIST.HELPDESK',
+                link: '/communities/helpDesk/list',
+                parentId: 8
+            },
+            {
+                id: 13,
+                label: 'MENUITEMS.COMMUNITIES.LIST.HR',
+                link: '/communities/hr',
+                parentId: 8
+            },
+            {
+                id: 14,
+                label: 'MENUITEMS.COMMUNITIES.LIST.ACCOUNTING',
+                link: '/communities/accounting',
+                parentId: 8
+            },
+            {
+                id: 15,
+                label: 'MENUITEMS.COMMUNITIES.LIST.REPAIR_MAINTENANCE',
+                link: '/',
+                parentId: 8
+            },
+            {
+                id: 16,
+                label: 'MENUITEMS.COMMUNITIES.LIST.INVENTORY',
+                link: '/communities/inventory/items',
+                parentId: 8
+            },
+            {
+                id: 17,
+                label: 'MENUITEMS.COMMUNITIES.LIST.PARKING',
+                link: '/communities/parking',
+                parentId: 8
+            },
+            {
+                id: 18,
+                label: 'MENUITEMS.COMMUNITIES.LIST.VISITORS',
+                link: '/communities/visitors',
+                parentId: 8
+            },
+            {
+                id: 19,
+                label: 'MENUITEMS.COMMUNITIES.LIST.ADD_COMMUNITIES',
+                link: '/communities/add-communities',
+                parentId: 8
+            },
+            {
+                id: 20,
+                label: 'MENUITEMS.COMMUNITIES.LIST.CUSTOMER_FEEDBACK',
+                link: '/communities/feedback',
+                parentId: 8
             },
             {
                 id: 21,
-                label: 'MENUITEMS.COMMUNITIES.LIST.VENDOR_MANAGEMENT',
-                link: '/communities/vendors',
-                parentId: 19
+                label: 'MENUITEMS.COMMUNITIES.LIST.BOOKING',
+                link: '/communities/booking',
+                parentId: 8
             },
             {
                 id: 22,
-                label: 'MENUITEMS.COMMUNITIES.LIST.INVOICING',
-                link: '/communities/invoicing/list',
-                parentId: 19
+                label: 'MENUITEMS.COMMUNITIES.LIST.SIGN-ON',
+                link: '/',
+                parentId: 8
             },
             {
                 id: 23,
-                label: 'MENUITEMS.COMMUNITIES.LIST.HELPDESK',
-                link: '/communities/helpDesk/list',
-                parentId: 19
+                label: 'MENUITEMS.COMMUNITIES.LIST.STAFF_MANAGEMENT',
+                link: '/',
+                parentId: 8
             },
             {
                 id: 24,
-                label: 'MENUITEMS.COMMUNITIES.LIST.HR',
-                link: '/communities/hr',
-                parentId: 19
-            },
-            {
-                id: 25,
-                label: 'MENUITEMS.COMMUNITIES.LIST.ACCOUNTING',
-                link: '/communities/accounting',
-                parentId: 19
-            },
-            {
-                id: 26,
-                label: 'MENUITEMS.COMMUNITIES.LIST.REPAIR_MAINTENANCE',
+                label: 'MENUITEMS.COMMUNITIES.LIST.RESIDENT_MANAGEMENT',
                 link: '/',
-                parentId: 19
-            },
-            {
-                id: 27,
-                label: 'MENUITEMS.COMMUNITIES.LIST.INVENTORY',
-                link: '/communities/inventory/items',
-                parentId: 19
-            },
-            {
-                id: 28,
-                label: 'MENUITEMS.COMMUNITIES.LIST.PARKING',
-                link: '/communities/parking',
-                parentId: 19
-            },
-            {
-                id: 29,
-                label: 'MENUITEMS.COMMUNITIES.LIST.VISITORS',
-                link: '/communities/visitors',
-                parentId: 19
-            },
-            {
-                id: 30,
-                label: 'MENUITEMS.COMMUNITIES.LIST.NOTICE_COMMUNICATION',
-                link: '/',
-                parentId: 19
-            },
-            {
-                id: 31,
-                label: 'MENUITEMS.COMMUNITIES.LIST.CUSTOMER_FEEDBACK',
-                link: '/communities/feedback',
-                parentId: 19
-            },
-            {
-                id: 32,
-                label: 'MENUITEMS.COMMUNITIES.LIST.BOOKING',
-                link: '/communities/booking',
-                parentId: 19
-            },
-            {
-                id: 33,
-                label: 'MENUITEMS.COMMUNITIES.LIST.SIGN-ON',
-                link: '/',
-                parentId: 19
-            },
-            {
-                id: 34,
-                label: 'MENUITEMS.COMMUNITIES.LIST.ROLE_TAGGING(STAFF_MANAGEMENT)',
-                link: '/',
-                parentId: 19
-            },
-            {
-                id: 35,
-                label: 'MENUITEMS.COMMUNITIES.LIST.PROPERTY_TAGGING(RESIDENT_MANAGEMENT)',
-                link: '/',
-                parentId: 19
+                parentId: 8
             },
         ]
     },
@@ -226,27 +196,27 @@ export const MENU: MenuItem[] = [
     // People
 
     {
-        id: 20,
+        id: 25,
         label: 'MENUITEMS.PEOPLE.TEXT',
         icon: 'ph-gauge',
         subItems: [
             {
-                id: 36,
+                id: 26,
                 label: 'MENUITEMS.PEOPLE.LIST.STAFF',
                 link: '/people/staff',
-                parentId: 20
+                parentId: 25
             },
             {
-                id: 37,
+                id: 27,
                 label: 'MENUITEMS.PEOPLE.LIST.RESIDENT',
                 link: '/people/resident',
-                parentId: 20
+                parentId: 25
             },
             {
-                id: 38,
+                id: 28,
                 label: 'MENUITEMS.PEOPLE.LIST.USERS',
                 link: '/people/users',
-                parentId: 20
+                parentId: 25
             }
         ]
     },
@@ -254,51 +224,63 @@ export const MENU: MenuItem[] = [
     // Finance
 
     {
-        id: 21,
+        id: 29,
         label: 'MENUITEMS.FINANCE.TEXT',
         icon: 'ph-gauge',
         subItems: [
             {
-                id: 39,
+                id: 30,
                 label: 'MENUITEMS.FINANCE.LIST.PAYABLE',
-                link: '/',
-                parentId: 21
+                link: '/finance/payable',
+                parentId: 29
             },
             {
-                id: 40,
+                id: 31,
                 label: 'MENUITEMS.FINANCE.LIST.RECEIVABLE',
-                link: '/',
-                parentId: 21
+                link: '/finance/receivable',
+                parentId: 29
             },
             {
-                id: 41,
+                id: 32,
                 label: 'MENUITEMS.FINANCE.LIST.INVOICES',
-                link: '/',
-                parentId: 21
+                link: '/finance/invoices',
+                parentId: 29
             },
             {
-                id: 42,
+                id: 33,
                 label: 'MENUITEMS.FINANCE.LIST.PURCHASE_REQUESTS',
                 link: '/',
-                parentId: 21
+                parentId: 29
             },
             {
-                id: 43,
+                id: 34,
                 label: 'MENUITEMS.FINANCE.LIST.PURCHASE_ORDERS',
-                link: '/',
-                parentId: 21
+                link: '/finance/purchase-orders',
+                parentId: 29
             },
             {
-                id: 44,
+                id: 35,
                 label: 'MENUITEMS.FINANCE.LIST.BANK',
                 link: '/',
-                parentId: 21
+                parentId: 29
             },
             {
-                id: 45,
+                id: 36,
+                label: 'MENUITEMS.FINANCE.LIST.BRANCH',
+                link: '/',
+                parentId: 29
+            },
+            {
+                id: 37,
+                label: 'MENUITEMS.FINANCE.LIST.EXPENSE_HEAD',
+                link: '/',
+                parentId: 29
+            },
+            {
+                id: 38,
                 label: 'MENUITEMS.FINANCE.LIST.USERSMAINTENANCE_EXPENSES',
                 link: '/',
-                parentId: 21
+                parentId: 29
             }
         ]
     },
@@ -306,39 +288,39 @@ export const MENU: MenuItem[] = [
     // Utilities
 
     {
-        id: 22,
+        id: 39,
         label: 'MENUITEMS.UTILITIES.TEXT',
         icon: 'ph-gauge',
         subItems: [
             {
-                id: 46,
+                id: 40,
                 label: 'MENUITEMS.UTILITIES.LIST.PARKING',
                 link: '/communities/parking',
-                parentId: 22
+                parentId: 39
             },
             {
-                id: 47,
+                id: 41,
                 label: 'MENUITEMS.UTILITIES.LIST.FACILITIES',
                 link: '/',
-                parentId: 22
+                parentId: 39
             },
             {
-                id: 48,
+                id: 42,
                 label: 'MENUITEMS.UTILITIES.LIST.VISITORS',
                 link: '/communities/visitors',
-                parentId: 22
+                parentId: 39
             },
             {
-                id: 49,
+                id: 43,
                 label: 'MENUITEMS.UTILITIES.LIST.SECURITY',
                 link: '/',
-                parentId: 22
+                parentId: 39
             },
             {
-                id: 50,
+                id: 44,
                 label: 'MENUITEMS.UTILITIES.LIST.COMMUNICATIONS',
                 link: '/',
-                parentId: 22
+                parentId: 39
             }
         ]
     },
@@ -346,15 +328,15 @@ export const MENU: MenuItem[] = [
     // Support
 
     {
-        id: 23,
+        id: 45,
         label: 'MENUITEMS.SUPPORT.TEXT',
         icon: 'ph-gauge',
         subItems: [
             {
-                id: 51,
+                id: 46,
                 label: 'MENUITEMS.SUPPORT.LIST.TICKETS',
                 link: '/communities/helpDesk/list',
-                parentId: 23
+                parentId: 45
             }
         ]
     },
@@ -362,33 +344,33 @@ export const MENU: MenuItem[] = [
     // Admin
 
     {
-        id: 24,
+        id: 47,
         label: 'MENUITEMS.ADMIN.TEXT',
         icon: 'ph-gauge',
         subItems: [
             {
-                id: 52,
+                id: 48,
                 label: 'MENUITEMS.ADMIN.LIST.COMMUNITIES',
                 link: '/communities',
-                parentId: 24
+                parentId: 47
             },
             {
-                id: 53,
+                id: 49,
                 label: 'MENUITEMS.ADMIN.LIST.PROPERTIES',
                 link: '/communities',
-                parentId: 24
+                parentId: 47
             },
             {
-                id: 54,
+                id: 50,
                 label: 'MENUITEMS.ADMIN.LIST.PROJECTS',
                 link: '/',
-                parentId: 24
+                parentId: 47
             },
             {
-                id: 55,
+                id: 51,
                 label: 'MENUITEMS.ADMIN.LIST.ACCESS_CONTROL',
                 link: '/',
-                parentId: 24
+                parentId: 47
             },
         ]
     },
@@ -396,21 +378,21 @@ export const MENU: MenuItem[] = [
     // Reports & Analytics
 
     {
-        id: 25,
+        id: 52,
         label: 'MENUITEMS.REPORTS_ANALYTICS.TEXT',
         icon: 'ph-gauge',
         subItems: [
             {
-                id: 56,
+                id: 53,
                 label: 'MENUITEMS.REPORTS_ANALYTICS.LIST.REPORTS',
                 link: '/',
-                parentId: 25
+                parentId: 52
             },
             {
-                id: 57,
+                id: 54,
                 label: 'MENUITEMS.REPORTS_ANALYTICS.LIST.ANALYTICS',
                 link: '/',
-                parentId: 25
+                parentId: 52
             }
         ]
     },

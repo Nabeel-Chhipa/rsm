@@ -29,7 +29,7 @@
       }
     },
     "COMMUNITIES": {
-      "TEXT": "COMMUNITIES",
+      "TEXT": "Communities",
       "LIST": {
         "PROPERTY_MANAGEMENT": "Property Management",
         "VENDOR_MANAGEMENT": "Vendor Management",
@@ -45,12 +45,13 @@
         "CUSTOMER_FEEDBACK": "Customer feedback",
         "BOOKING": "Booking",
         "SIGN-ON": "Sign-on",
-        "ROLE_TAGGING(STAFF_MANAGEMENT)": "Role Tagging (Staff Management)",
-        "PROPERTY_TAGGING(RESIDENT_MANAGEMENT)": "Property Tagging (Resident Management)"
+        "STAFF_MANAGEMENT": "Staff Management",
+        "RESIDENT_MANAGEMENT": "Resident Management",
+        "ADD_COMMUNITIES": "Add Communities"
       }
     },
     "PEOPLE": {
-      "TEXT": "PEOPLE",
+      "TEXT": "People",
       "LIST": {
         "STAFF": "Staff",
         "RESIDENT": "Resident",
@@ -58,7 +59,7 @@
       }
     },
     "FINANCE": {
-      "TEXT": "FINANCE",
+      "TEXT": "Finance",
       "LIST": {
         "PAYABLE": "Payable",
         "RECEIVABLE": "Receivable",
@@ -66,11 +67,13 @@
         "PURCHASE_REQUESTS": "Purchase Requests",
         "PURCHASE_ORDERS": "Purchase Orders",
         "BANK": "Bank",
+        "BRANCH": "Branch",
+        "EXPENSE_HEAD": "Expense Head",
         "USERSMAINTENANCE_EXPENSES": "Maintenance Expenses"
       }
     },
     "UTILITIES": {
-      "TEXT": "UTILITIES",
+      "TEXT": "Utilities",
       "LIST": {
         "PARKING": "Parking",
         "FACILITIES": "Facilities",

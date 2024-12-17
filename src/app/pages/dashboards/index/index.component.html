@@ -102,7 +102,7 @@
     </div><!--end col-->
 </div><!--end row-->
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-xxl-4 order-last order-xxl-first">
         <div class="card">
             <div class="card-header d-flex">
@@ -123,7 +123,7 @@
                 <div echarts [options]="propertytypeChart" id="property_type" style="height: 336px;"></div>
             </div>
         </div>
-    </div><!--end col-->
+    </div>
     <div class="col-xxl-8">
         <div class="card">
             <div class="card-header d-flex align-items-center">
@@ -167,7 +167,6 @@
                                                 [yaxis]="totalrevenueChart.yaxis" [legend]="totalrevenueChart.legend"
                                                 [xaxis]="totalrevenueChart.xaxis" dir="ltr"></apx-chart>
                                         </div>
-                                        <!--end tab-->
                                     </div>
                                 </tab>
                                 <tab (selectTab)="renderCharts('2')">
@@ -254,12 +253,12 @@
                             </tabset>
                         </div>
 
-                    </div><!--end col-->
-                </div><!--end row-->
+                    </div>
+                </div>
             </div>
         </div>
-    </div><!--end col-->
-</div><!--end row-->
+    </div>
+</div> -->
 
 <div class="row">
     <div class="col-xxl-9">
@@ -290,7 +289,7 @@
                         <thead class="text-muted table-light">
                             <tr>
                                 <th scope="col" class="sort cursor-pointer" (click)="onSort('id')">#</th>
-                                <th scope="col" class="sort cursor-pointer" (click)="onSort('type')">Property Type</th>
+                                <th scope="col" class="sort cursor-pointer" (click)="onSort('type')">Type</th>
                                 <th scope="col" class="sort cursor-pointer" (click)="onSort('name')">Property Name</th>
                                 <th scope="col" class="sort cursor-pointer" (click)="onSort('address')">Address</th>
                                 <th scope="col" class="sort cursor-pointer" (click)="onSort('agentname')">Agent Name
@@ -304,7 +303,7 @@
                             @for (data of propertylist; track $index) {
                             <tr>
                                 <td class="propert_id">
-                                    <a routerLink="/ecommerce/order-overview"
+                                    <a routerLink="/communities/properties/overview"
                                         class="fw-medium link-primary">{{data.id}}</a>
                                 </td>
                                 <td class="propert_type">
@@ -506,7 +505,7 @@
 
 
             <div class="row">
-                <div class="col-xl-7">
+                <!-- <div class="col-xl-7">
                     <div class="card">
                         <div class="card-body">
                             <div class="row g-4">
@@ -529,9 +528,9 @@
                             }
                             </div>
                         </div>
-                    </div><!--end card-->
-                </div><!--end col-->
-                <div class="col-xl-5">
+                    </div>
+                </div> -->
+                <div class="col-xl-12">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex mb-4 pb-1">

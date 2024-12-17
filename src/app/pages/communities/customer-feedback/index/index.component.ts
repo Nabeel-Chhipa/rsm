@@ -64,8 +64,7 @@ ngOnInit(): void {
     name: ['', [Validators.required]],
     email: ['', [Validators.required]],
     phone: ['', [Validators.required]],
-    create_date: ['', [Validators.required]],
-    status: ['', [Validators.required]],
+    review: ['', [Validators.required]],
     img: ['']
   });
 }

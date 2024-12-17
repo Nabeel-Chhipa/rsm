@@ -1,5 +1,5 @@
 <!-- Start Breadcrumbs -->
-<app-breadcrumbs title="Customers" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<app-breadcrumbs title="Customers Feedback" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
 <!-- End Breadcrumbs -->
 
 
@@ -9,12 +9,12 @@
             <div class="card-body">
                 <div class="d-flex align-items-center flex-wrap gap-3">
                     <div class="flex-grow-1">
-                        <h3 class="card-title mb-0">Customers List</h3>
+                        <!-- <h3 class="card-title mb-0">Customers List</h3> -->
                     </div>
                     <div>
                         <div class="d-flex flex-wrap gap-2">
                             <button type="button" class="btn btn-primary add-btn" (click)="showModal.show()"><i class="bi bi-plus-circle align-baseline me-1"></i> Add
-                                Customer</button>
+                                Feedback</button>
                             <button type="button" class="btn btn-secondary"><i class="ph-cloud-arrow-down align-middle me-1"></i> Import</button>
                             <button type="button" class="btn btn-subtle-info"><i class="ph-cloud-arrow-up align-middle me-1"></i> Export</button>
                         </div>
@@ -27,7 +27,7 @@
 
 <div class="row" id="customer-list">
     <div class="col-xxl-8">
-        <div class="card">
+        <!-- <div class="card">
             <div class="card-body">
                 <div class="row gy-3">
                     <div class="col-xl-4">
@@ -54,7 +54,8 @@
                     </div>
                 </div>
             </div>
-        </div><!--end card-->
+        </div> -->
+        <!--end card-->
         <div class="card">
             <div class="card-body">
                 <div class="table-responsive table-card">
@@ -76,9 +77,9 @@
                                     </div>
                                 </td>
                                 <td class="email">{{data.email}}</td>
-                                <td class="contact">{{data.phone}}</td>
-                                <td class="date">{{data.create_date}}</td>
-                                <td class="status"><span class="badge" [ngClass]="{'bg-secondary-subtle text-secondary': data.status === 'Unactive','bg-success-subtle text-success': data.status === 'Active','bg-danger-subtle text-danger': data.status === 'Block'}">{{data.status}}</span></td>
+                                <!-- <td class="contact">{{data.phone}}</td>
+                                <td class="date">{{data.create_date}}</td> -->
+                                <!-- <td class="status"><span class="badge" [ngClass]="{'bg-secondary-subtle text-secondary': data.status === 'Unactive','bg-success-subtle text-success': data.status === 'Active','bg-danger-subtle text-danger': data.status === 'Block'}">{{data.status}}</span></td> -->
                                 <td>
                                     <div dropdown class="dropdown">
                                         <button dropdownToggle class="btn btn-subtle-secondary btn-sm dropdown" type="button">
@@ -165,18 +166,18 @@
                                     <th>Email</th>
                                     <td class="overview-email">{{customerdetail.email}}</td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <th>Contact</th>
                                     <td class="overview-contact">{{customerdetail.phone}}</td>
-                                </tr>
-                                <tr>
+                                </tr> -->
+                                <!-- <tr>
                                     <th>Joining Date</th>
                                     <td class="overview-date">{{customerdetail.create_date}}</td>
                                 </tr>
                                 <tr>
                                     <th>Status</th>
                                     <td class="overview-status"><span class="badge bg-danger-subtle text-danger">{{customerdetail.status}}</span></td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>
@@ -187,7 +188,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body px-0 pt-0">
+                <!-- <div class="card-body px-0 pt-0">
                     <h6 class="fs-md px-4 mb-3">Order History</h6>
                     <ngx-simplebar class="px-4" style="max-height: 333px;">
                         <div class="vstack gap-2">
@@ -361,7 +362,7 @@
                             </div>
                         </div>
                     </ngx-simplebar>
-                </div>
+                </div> -->
             </div>
         }
     </div>
@@ -372,7 +373,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-light p-3">
-                <h5 class="modal-title" id="exampleModalLabel">Add Customer</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Add Feedback</h5>
                 <button type="button" class="btn-close" (click)="showModal.hide()"></button>
             </div>
             <form (ngSubmit)="saveCustomer()" [formGroup]="customerForm" class="tablelist-form" novalidate autocomplete="off">
@@ -412,17 +413,9 @@
                         <input type="text" id="contact-field" formControlName="phone" class="form-control" placeholder="Enter contact no" required>
                     </div>
                     <div class="mb-3">
-                        <label for="date-field" class="form-label">Joining Date</label>
-                        <input type="date" id="date-field" class="form-control" formControlName="create_date" mwlFlatpickr dateFormat="d M, Y" required>
-                    </div>
-                    <div>
-                        <label for="status-field" class="form-label">Status</label>
-                        <select class="form-control" formControlName="status" name="status-field" id="status-field" required>
-                            <option value="">Status</option>
-                            <option value="Active">Active</option>
-                            <option value="Block">Block</option>
-                            <option value="Unactive">Unactive</option>
-                        </select>
+                        <label for="review-input" class="form-label">Review</label>
+                        <textarea class="form-control" id="review-input" rows="3"
+                            formControlName="review" placeholder="Enter Review"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">

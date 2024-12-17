@@ -1,0 +1,197 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Add Communities" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <form class="tablelist-form" novalidate autocomplete="off">
+                            <div id="alert-error-msg" class="d-none alert alert-danger py-2"></div>
+                            <input type="hidden" id="id-field">
+                            <div class="mb-3">
+                                <label class="form-label">Community Images <span class="text-danger">*</span></label>
+                                <dropzone class="dropzone" [config]="dropzoneConfig" [message]="'Drop files here or click to upload.'" (success)="onUploadSuccess($event)"></dropzone>
+                                @if (uploadedFiles) {
+                                <ul class="list-unstyled mb-0" id="dropzone-preview">
+                                    @for (file of uploadedFiles; track $index) {
+                                    <li class="mt-2" id="dropzone-preview-list">
+                                        <div class="border rounded">
+                                            <div class="d-flex p-2">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="avatar-sm bg-light rounded p-2">
+                                                        @if (file.dataURL) {
+                                                            <img class="img-fluid rounded d-block" [src]="file.dataURL" alt="Dropzone-Image" />
+                                                        }@else{
+                                                            <img class="img-fluid rounded d-block" [src]="file" alt="Dropzone-Image" />
+                                                        }                                              
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="pt-1">
+                                                        @if (file.name) { <h5 class="fs-md mb-1">{{ file.name }}</h5>}
+                                                        @if (file.size) { <p class="fs-sm text-muted mb-0">{{ file.size }}</p>}
+                                                    </div>
+                                                </div>
+                                                <div class="flex-shrink-0 ms-3">
+                                                    <button (click)="removeFile(file)" class="btn btn-sm btn-danger">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                                </ul>
+                            }
+                                <!-- end dropzon-preview -->
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="client" class="form-label">Client Type<span class="text-danger">*</span></label>
+                                        <select class="form-select" id="client" formControlName="clientType">
+                                            <option value="">Select Client Type</option>
+                                            @for(clientType of clientType; track $index) {
+                                            <option value=`{clientType.name}`>{{clientType.name}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="client-no-input" class="form-label">Client No</label>
+                                        <input type="text" id="client-no-input" formControlName="clientNo"
+                                            class="form-control" placeholder="Enter Client No">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="client-name-input" class="form-label">Client Name</label>
+                                        <input type="text" id="client-name-input" formControlName="clientName"
+                                            class="form-control" placeholder="Enter Client Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="client-detail-input" class="form-label">Client Detail</label>
+                                        <textarea class="form-control" id="client-detail-input" rows="3"
+                                            formControlName="clientDetail" placeholder="Enter Client Detail"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="remarks-input" class="form-label">Remarks</label>
+                                        <textarea class="form-control" id="remarks-input" rows="3"
+                                            formControlName="remarks" placeholder="Enter Remarks"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="client-status-input" class="form-label">Client Status<span class="text-danger">*</span></label>
+                                        <select class="form-select" id="client-status-input" formControlName="clientStatus">
+                                            <option value="">Select Status</option>
+                                            @for(status of clientStatus; track $index) {
+                                            <option value=`{status.name}`>{{status.name}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="remarks-input" class="form-label">Remarks</label>
+                                        <textarea class="form-control" id="remarks-input" rows="3"
+                                            formControlName="remarks" placeholder="Enter Remarks"></textarea>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="mb-3">
+                                        <label for="project-progress-input" class="form-label">Project Progress</label>
+                                        <textarea class="form-control" id="project-progress-input" rows="3"
+                                            formControlName="projectProgress"
+                                            placeholder="Enter Project Progress"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hstack gap-2 justify-content-end mb-3">
+                                <button class="btn btn-danger"><i class="ph-x align-middle"></i> Cancel</button>
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->
+
+<!-- POC FORM -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xxl-4">
+                        <h5 class="card-title mb-3">POC</h5>
+                        <p class="text-muted">Product Information refers to any information held by an organization
+                            about the products it produces, buys, sells or distributes.</p>
+                    </div><!--end col-->
+                    <div class="col-xxl-8">
+                        <form class="tablelist-form" novalidate autocomplete="off">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="poc-name-input" class="form-label">POC Name</label>
+                                        <input type="text" id="poc-name-input" formControlName="pocName"
+                                            class="form-control" placeholder="Enter POC Name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="poc-designation-input" class="form-label">POC Designation</label>
+                                        <input type="text" id="poc-designation-input" formControlName="pocDesignation"
+                                            class="form-control" placeholder="Enter POC Designation">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="contact-numbrt-input" class="form-label">Contact Number</label>
+                                        <input class="form-control" id="contact-numbrt-input"                                           formControlName="contactNumber" placeholder="Enter Contact Number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="email-input" class="form-label">Email</label>
+                                        <input type="email" id="email-input" formControlName="pocEmail"
+                                            class="form-control" placeholder="Enter Email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="address-input" class="form-label">Address</label>
+                                        <input type="text" id="address-input" formControlName="address"
+                                            class="form-control" placeholder="Enter Address">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="city-numbrt-input" class="form-label">City</label>
+                                        <input class="form-control" id="city-numbrt-input"                                           formControlName="city" placeholder="Enter City">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div><!--end row-->
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->

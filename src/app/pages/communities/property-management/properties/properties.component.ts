@@ -26,9 +26,114 @@ export class PropertiesComponent {
   breadCrumbItems!: Array<{}>;
   productslist: any
   propertyForm!: UntypedFormGroup;
+  blockForm!: UntypedFormGroup;
   submitted = false;
   products: any;
-  endItem: any
+  endItem: any;
+  propertyType = [
+    {
+      'id': 1,
+      'name': 'Residential Appartments',
+    },
+    {
+      'id': 2,
+      'name': 'Offices',
+    },
+    {
+      'id': 3,
+      'name': 'Shopping Mall',
+    },
+    {
+      'id': 4,
+      'name': 'Shopping Mall & Residential',
+    },
+    {
+      'id': 5,
+      'name': 'Housing Society',
+    },
+  ];
+  blocks = [
+    {
+      'id': 1,
+      'name': 'Flats'
+    },
+    {
+      'id': 2,
+      'name': 'Shops'
+    },
+    {
+      'id': 3,
+      'name': 'Offices'
+    },
+    {
+      'id': 4,
+      'name': 'Parking'
+    }
+  ]
+  blockType = [
+    {
+      'id': 1,
+      'name': 'House'
+    },
+    {
+      'id': 2,
+      'name': 'Flats'
+    },
+    {
+      'id': 3,
+      'name': 'Portion'
+    },
+    {
+      'id': 4,
+      'name': 'Shop'
+    },
+    {
+      'id': 5,
+      'name': 'Show room'
+    },
+    {
+      'id': 6,
+      'name': 'Office'
+    }
+  ]
+  blockCategory = [
+    {
+      'id': 1,
+      'name': 'Studio Appartment'
+    },
+    {
+      'id': 2,
+      'name': 'Duplex'
+    },
+    {
+      'id': 3,
+      'name': 'Luxury Appartment'
+    },
+    {
+      'id': 4,
+      'name': 'Penthouse'
+    }
+  ]
+  units = [
+    {
+      'id': 1,
+      'name': 'Studio Appartment'
+    },
+    {
+      'id': 2,
+      'name': 'Duplex'
+    },
+    {
+      'id': 3,
+      'name': 'Luxury Appartment'
+    },
+    {
+      'id': 4,
+      'name': 'Penthouse'
+    }
+  ]
+  // isBlockActive = false
+  // isUnitActive = false
   // price: any = [500, 3800];
 
   bedroom: any;
@@ -46,6 +151,7 @@ export class PropertiesComponent {
   };
   
   @ViewChild('addProperty', { static: false }) addProperty?: ModalDirective;
+  @ViewChild('addBlock', { static: false }) addBlock?: ModalDirective;
   @ViewChild('deleteRecordModal', { static: false }) deleteRecordModal?: ModalDirective;
   deleteID: any;
   editData: any;
@@ -85,6 +191,17 @@ export class PropertiesComponent {
       agent: ['', [Validators.required]],
       requirement: ['', [Validators.required]],
       location: ['', [Validators.required]],
+      img: ['']
+    });
+
+    this.blockForm = this.formBuilder.group({
+      id: [''],
+      blockNo: ['', [Validators.required]],
+      blockTitle: [''],
+      BlockType: ['', [Validators.required]],
+      blockCategory: ['', [Validators.required]],
+      blockDescription: [''],
+      blockRemarks: [''],
       img: ['']
     });
   }
@@ -221,6 +338,15 @@ export class PropertiesComponent {
     this.deleteRecordModal?.hide()
   }
 
+  add_Block() {
+    this.addProperty?.hide()
+    this.addBlock?.show()
+  }
+
+  close_Block() {
+    this.addBlock?.hide()
+  }
+
 
   // File Upload
   public dropzoneConfig: DropzoneConfigInterface = {
@@ -265,4 +391,12 @@ export class PropertiesComponent {
       paginationElement.classList.remove('d-none')
     }
   }
+
+  // toggleBlock() {
+  //   this.isBlockActive = !this.isBlockActive
+  // }
+
+  // toggleUnit() {
+  //   this.isUnitActive = !this.isUnitActive
+  // }
 }

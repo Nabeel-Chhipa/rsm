@@ -369,80 +369,243 @@
                         }
                     </div>
 
-                    <div class="mb-3">
-                        <label for="property-title-input" class="form-label">Property title<span class="text-danger">*</span></label>
-                        <input type="text" id="property-title-input" formControlName="title" class="form-control" placeholder="Enter Property title" required>
-                    </div>
-
-
-                    <div class="mb-3">
-                        <label for="property-type-input" class="form-label">Property Type<span class="text-danger">*</span></label>
-
-                        <select class="form-select" id="property-type-input" formControlName="type">
-                            <option value="">Select Property Type</option>
-                            <option value="Villa">Villa</option>
-                            <option value="Residency">Residency</option>
-                            <option value="Apartment">Apartment</option>
-                            <option value="Others">Other</option>
-                        </select>
-                    </div>
-
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="mb-3">
-                                <label for="bedroom-input" class="form-label">Bedroom<span class="text-danger">*</span></label>
-                                <input type="number" id="bedroom-input" class="form-control" formControlName="bedroom" placeholder="Enter Bedroom" required>
+                                <label for="property-title-input" class="form-label">Property Title<span class="text-danger">*</span></label>
+                        <input type="text" id="property-title-input" formControlName="title" class="form-control" placeholder="Enter Property title" required>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="mb-3">
-                                <label for="bathroom-input" class="form-label">Bathroom<span class="text-danger">*</span></label>
-                                <input type="number" class="form-control" id="bathroom-input" formControlName="bathroom" placeholder="Enter Bathroom" required>
+                                <label for="property-short-name-input" class="form-label">Short Name<span class="text-danger">*</span></label>
+                        <input type="text" id="property-short-name-input" formControlName="shortName" class="form-control" placeholder="Enter Short Name" required>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="mb-3">
-                                <label for="sqft-input" class="form-label">SQFT<span class="text-danger">*</span></label>
-                                <input type="number" class="form-control" id="sqft-input" placeholder="Enter sqft" formControlName="area" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="mb-3">
-                                <label for="property-price-input" class="form-label">Price<span class="text-danger">*</span></label>
-                                <div class="input-group">
-                                    <span class="input-group-text">$</span>
-                                    <input type="number" class="form-control" id="property-price-input" formControlName="price" placeholder="Enter price" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="mb-3">
-                                <label for="agent-name-input" class="form-label">Agent Name<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="agent-name-input" formControlName="agent" placeholder="Enter Agent Name " required>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="mb-3">
-                                <label for="requirement-input" class="form-label">Requirement<span class="text-danger">*</span></label>
+                                <label for="property-type-input" class="form-label">Property Type<span class="text-danger">*</span></label>
 
-                                <select class="form-select" id="requirement-input" formControlName="requirement">
-                                    <option value="">Requirement Type</option>
-                                    <option value="Sale">Sale</option>
-                                    <option value="Rent">Rent</option>
-                                </select>
+                        <select class="form-select" id="property-type-input" formControlName="type">
+                            <option value="">Select Property Type</option>
+                            @for(property of propertyType; track $index) {
+                                <option value=`{property.name}`>{{property.name}}</option>
+                            }
+                        </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="block-type-input" class="form-label">Block</label>
+
+                        <select class="form-select" id="block-type-input" formControlName="type">
+                            <option value="">Select Block</option>
+                            @for(block of blocks; track $index) {
+                                <option value=`{block.name}`>{{block.name}}</option>
+                            }
+                        </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="unit-type-input" class="form-label">Unit</label>
+
+                        <select class="form-select" id="unit-type-input" formControlName="type">
+                            <option value="">Select Unit</option>
+                            @for(unit of units; track $index) {
+                                <option value=`{unit.name}`>{{unit.name}}</option>
+                            }
+                        </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="property-location-input" class="form-label">Location<span class="text-danger">*</span></label>
+                        <input type="text" id="property-location-input" formControlName="location" class="form-control" placeholder="Enter Location" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="property-area-input" class="form-label">Area<span class="text-danger">*</span></label>
+                        <input type="text" id="property-area-input" formControlName="area" class="form-control" placeholder="Enter Area" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="property-city-input" class="form-label">City<span class="text-danger">*</span></label>
+                        <input type="text" id="property-city-input" formControlName="city" class="form-control" placeholder="Enter City" required>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="mb-3">
-                                <label for="addressLine-input" class="form-label">Sort Address<span class="text-danger">*</span></label>
-                                <textarea class="form-control" id="addressLine-input" rows="3" formControlName="location" placeholder="Enter sort address" required></textarea>
+                                <label for="remarks-input" class="form-label">Remarks<span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="remarks-input" rows="3" formControlName="remarks" placeholder="Enter Remarks" required></textarea>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- @if(isBlockActive) {
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label for="property-block-input" class="form-label">Block</label>
+                                    <select class="form-select" id="property-block-input" formControlName="block">
+                                        <option value="">Select Block Type</option>
+                                        @for(block of blocks; track $index) {
+                                            <option value=`{block.name}`>{{block.name}}</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    @if(isUnitActive) {
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label for="property-unit-input" class="form-label">Unit</label>
+                                    <select class="form-select" id="property-unit-input" formControlName="unit">
+                                        <option value="">Select Unit</option>
+                                        @for(unit of units; track $index) {
+                                            <option value=`{unit.name}`>{{unit.name}}</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    } -->
+
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="submit" class="btn btn-primary" id="add-block" (click)="add_Block()">
+                            Add Block
+                        </button>
+                        <!-- <button type="submit" class="btn btn-primary" id="add-unit">
+                            {{ isUnitActive ? 'Remove' : 'Add' }} Unit
+                        </button> -->
                     </div>
                 </div>
                 <div class="modal-footer">
                     <div class="hstack gap-2 justify-content-end">
                         <button type="button" class="btn btn-ghost-danger" (click)="addProperty.hide()"><i class="bi bi-x-lg align-baseline me-1"></i> Close</button>
+                        <button type="submit" class="btn btn-primary" id="add-btn">Post</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal-content -->
+    </div>
+</div>
+
+<!-- BLOCK MODAL -->
+<div bsModal #addBlock="bs-modal" class="modal fade" id="addBlock">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addBlockModalLabel">Add Block list</h5>
+                <button type="button" class="btn-close" (click)="addBlock.hide()"></button>
+            </div>
+
+            <form  [formGroup]="blockForm" class="tablelist-form" novalidate autocomplete="off">
+                <div class="modal-body">
+                    <div id="alert-error-msg" class="d-none alert alert-danger py-2"></div>
+                    <input type="hidden" id="id-field">
+                    <div class="mb-3">
+                        <label class="form-label">Block Images<span class="text-danger">*</span></label>
+                        <dropzone class="dropzone" [config]="dropzoneConfig" [message]="'Drop files here or click to upload.'" (success)="onUploadSuccess($event)"></dropzone>
+                        @if (uploadedFiles) {
+                        <ul class="list-unstyled mb-0" id="dropzone-preview">
+                            @for (file of uploadedFiles; track $index) {
+                            <li class="mt-2" id="dropzone-preview-list">
+                                <div class="border rounded">
+                                    <div class="d-flex flex-wrap gap-2 p-2">
+                                        <div class="flex-shrink-0 me-3">
+                                            <div class="avatar-sm bg-light rounded p-2">
+                                                @if (file.dataURL) {
+                                                <img class="img-fluid rounded d-block" [src]="file.dataURL" alt="Dropzone-Image" />
+                                                }@else {
+                                                <img class="img-fluid rounded d-block" [src]="file" alt="Dropzone-Image" />
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="pt-1">
+                                                @if (file.name) { <h5 class="fs-md mb-1">{{ file.name }}</h5>}
+                                                @if (file.size) {<p class="fs-sm text-muted mb-0">{{ file.size }}</p>}
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-3">
+                                            <button (click)="removeFile(file)" class="btn btn-sm btn-danger">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                        </ul>
+                        }
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="block-no-input" class="form-label">Block No<span class="text-danger">*</span></label>
+                        <input type="text" id="block-no-input" formControlName="blockNo" class="form-control" placeholder="Enter Block No" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="block-title-input" class="form-label">Block Title</label>
+                        <input type="text" id="block-title-input" formControlName="blockTitle" class="form-control" placeholder="Enter Block Title">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="block-type-input" class="form-label">Block Type<span class="text-danger">*</span></label>
+
+                        <select class="form-select" id="block-type-input" formControlName="BlockType">
+                            <option value="">Select Block Type</option>
+                            @for(blockType of blockType; track $index) {
+                                <option value=`{blockType.name}`>{{blockType.name}}</option>
+                            }
+                        </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="block-category-input" class="form-label">Block Category</label>
+
+                        <select class="form-select" id="block-category-input" formControlName="blockCategory">
+                            <option value="">Select Block Category</option>
+                            @for(blockCategory of blockCategory; track $index) {
+                                <option value=`{blockCategory.name}`>{{blockCategory.name}}</option>
+                            }
+                        </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label for="block-description-input" class="form-label">Block Description</label>
+                                <textarea class="form-control" id="block-description-input" rows="3" formControlName="blockDescription" placeholder="Enter Block Description"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label for="remarks-input" class="form-label">Remarks</label>
+                                <textarea class="form-control" id="remarks-input" rows="3" formControlName="blockRemarks" placeholder="Enter Remarks"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="button" class="btn btn-ghost-danger" (click)="addBlock.hide()"><i class="bi bi-x-lg align-baseline me-1"></i> Close</button>
                         <button type="submit" class="btn btn-primary" id="add-btn">Add</button>
                     </div>
                 </div>
