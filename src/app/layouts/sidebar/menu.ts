@@ -114,19 +114,19 @@ export const MENU: MenuItem[] = [
                 isCollapsed: true,
                 subItems: [
                     {
-                        id: 11.1,
+                        id: 111,
                         label: 'MENUITEMS.COMMUNITIES.LIST.INVOICE_LIST',
                         link: '/communities/invoicing/list',
                         parentId: 11
                     },
                     {
-                        id: 11.2,
+                        id: 112,
                         label: 'MENUITEMS.COMMUNITIES.LIST.GENERATE_INVOICE',
                         link: '/communities/invoicing/generate-invoice',
                         parentId: 11
                     },
                     {
-                        id: 11.3,
+                        id: 113,
                         label: 'MENUITEMS.COMMUNITIES.LIST.INVOICE_RECEIVING',
                         link: '/communities/invoicing/invoice-receiving',
                         parentId: 11
