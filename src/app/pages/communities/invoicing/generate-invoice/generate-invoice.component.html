@@ -1,0 +1,192 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Generate Invoice" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <form class="tablelist-form" novalidate autocomplete="off">
+                            <div id="alert-error-msg" class="d-none alert alert-danger py-2"></div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="mb-3">
+                                        <label for="invoice" class="form-label">Invoice Type<span class="text-danger">*</span></label>
+                                        <select class="form-select" id="invoice" formControlName="invoiceType">
+                                            <option value="">Select Invoice Type</option>
+                                            @for(invoiceType of invoiceType; track $index) {
+                                            <option value=`{invoiceType.name}`>{{invoiceType.name}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="mb-3">
+                                        <label for="from-date-input" class="form-label">From Date<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" mwlFlatpickr [altInput]="true" [convertModelValue]="true" dateFormat="d M,Y" altFormat="d M,Y" formControlName="fromDate" id="from-date-input" placeholder="from Date" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="mb-3">
+                                        <label for="to-date-input" class="form-label">To Date<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" mwlFlatpickr [altInput]="true" [convertModelValue]="true" dateFormat="d M,Y" altFormat="d M,Y" formControlName="toDate" id="to-date-input" placeholder="To Date" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="mb-3">
+                                        <label for="status-select" class="form-label">Status<span class="text-danger">*</span></label>
+                                        <select class="form-select" id="status-select" formControlName="status">
+                                            <option value="">Select Status</option>
+                                            @for(status of status; track $index) {
+                                            <option value=`{status.name}`>{{status.name}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="mb-3">
+                                        <label for="block" class="form-label">Block<span class="text-danger">*</span></label>
+                                        <select class="form-select" id="block" formControlName="block">
+                                            <option value="">Select block</option>
+                                            @for(block of block; track $index) {
+                                            <option value=`{block.name}`>{{block.name}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="mb-3">
+                                        <label for="category" class="form-label">Category<span class="text-danger">*</span></label>
+                                        <select class="form-select" id="category" formControlName="category">
+                                            <option value="">Select block</option>
+                                            @for(category of category; track $index) {
+                                            <option value=`{category.name}`>{{category.name}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="mb-3">
+                                        <label for="unit" class="form-label">Unit<span class="text-danger">*</span></label>
+                                        <select class="form-select" id="unit" formControlName="unit">
+                                            <option value="">Select unit</option>
+                                            @for(unit of unit; track $index) {
+                                            <option value=`{unit.name}`>{{unit.name}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="mb-3">
+                                        <label for="poc-name-input" class="form-label">POC Name<span class="text-danger">*</span></label>
+                                        <input type="text" id="poc-name-input" formControlName="pocName" class="form-control" placeholder="Enter POC Name" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hstack gap-2 justify-content-end mb-3">
+                                <!-- <button class="btn btn-danger"><i class="ph-x align-middle"></i> Cancel</button> -->
+                                <button class="btn btn-primary">Get List</button>
+                            </div>
+                        </form>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div>
+
+
+            <div class="card-body mt-3">
+                <div class="table-responsive table-card p-3">
+                    <table class="table table-centered align-middle table-custom-effect table-nowrap mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkAll" [(ngModel)]="masterSelected" (change)="checkUncheckAll($event)">
+                                        <label class="form-check-label" for="checkAll"></label>
+                                    </div>
+                                </th>
+                                <th scope="col" class="sort cursor-pointer">Block</th>
+                                <th scope="col" class="sort cursor-pointer">Category</th>
+                                <th scope="col" class="sort cursor-pointer">Unit</th>
+                                <th scope="col" class="sort cursor-pointer">POC Name</th>
+                                <th scope="col" class="sort cursor-pointer">Amount</th>
+                                <th scope="col" class="sort cursor-pointer">Arrears</th>
+                                <th scope="col" class="sort cursor-pointer">Status</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list form-check-all" id="invoice-list-data">
+                            @for (data of propertiesData; track $index) {
+                            <tr id="l_{{data.id}}">
+                                <td>
+                                    <div class="form-check"> <input class="form-check-input" type="checkbox" name="checkAll" value="{{data.id}}" [(ngModel)]="data.states" (change)="onCheckboxChange($event)"> <label class="form-check-label"></label> </div>
+                                </td>
+                                <td class="block">{{data.block}}</td>
+                                <td class="category">{{data.category}}</td>
+                                <td class="unit">{{data.unit}}</td>
+                                <td class="poc_Name">{{data.poc_Name}}</td>
+                                <td class="ammount">{{data.ammount}}</td>
+                                <td class="arrears">{{data.arrears}}</td>
+                                <td class="status"><span class="badge" [ngClass]="{'bg-success-subtle text-success':data.status == 'Payment Received','bg-danger-subtle text-danger':data.status === 'Not Issued' || data.status === 'Refund','bg-warning-subtle text-warning':data.status ==='Payment Overdue'}">{{data.status}}</span>
+                                </td>
+                                <td>
+                                    <ul class="d-flex gap-2 list-unstyled mb-0">
+                                        <li><a href="javascript:void(0);" class="btn btn-subtle-primary btn-icon btn-sm" routerLink="/communities/invoicing/overview" data-view-id="24301901"><i class="ph-eye"></i></a> </li>
+                                        <li><a href="javascript:void(0);" class="btn btn-subtle-secondary btn-icon btn-sm" routerLink="/communities/invoicing/create" data-edit-id="24301901"><i class="ph-pencil"></i></a> </li>
+                                        <li><a href="javascript:void(0);" class="btn btn-subtle-danger btn-icon btn-sm remove-item-btn"><i class="ph-trash"></i></a> </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        }
+                        </tbody><!-- end tbody -->
+                    </table><!-- end table -->
+
+                    <div class="noresult" style="display: none;">
+                        <div class="text-center py-4">
+                            <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                            <p class="text-muted mb-0">We've searched more than 6+ invoice We did not find any invoice
+                                for you search.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center mt-4 pt-3" id="pagination-element">
+                    <div class="col-sm">
+                        <div class="text-muted text-center text-sm-start">
+                            Showing <span class="fw-semibold">{{propertiesData.length}}</span> of <span class="fw-semibold">{{propertiesData.length}}</span> Results
+                        </div>
+                    </div><!--end col-->
+                    <div class="col-sm-auto mt-3 mt-sm-0">
+                        <pagination class="pagination-wrap hstack justify-content-center gap-2"  [itemsPerPage]="10" (pagrChanged)="pageChanged($event)"></pagination>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div>
+
+            <div class="card-body">
+                <form class="tablelist-form" novalidate autocomplete="off">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label for="due-date-input" class="form-label">Due Date<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" mwlFlatpickr [altInput]="true" [convertModelValue]="true" dateFormat="d M,Y" altFormat="d M,Y" formControlName="dueDate" id="due-date-input" placeholder="Select Due Date" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label for="Remarks-input" class="form-label">Remarks<span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="remarks-input" rows="3" formControlName="remarks" placeholder="Enter Remarks" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hstack gap-2 justify-content-end mb-3">
+                        <button class="btn btn-primary">Post Invoice</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->

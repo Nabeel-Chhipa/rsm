@@ -23,13 +23,31 @@ import { ListComponent } from './list/list.component';
 import { OverviewComponent } from './overview/overview.component';
 import { CreateComponent } from './create/create.component';
 import { InvoicingRoutingModule } from './invoicing-routing.module';
+import { GenerateInvoiceComponent } from './generate-invoice/generate-invoice.component';
 
+// Flat Picker
+import { FlatpickrModule } from 'angularx-flatpickr';
+
+// Drop Zone
+import { DropzoneModule } from 'ngx-dropzone-wrapper';
+import { DROPZONE_CONFIG } from 'ngx-dropzone-wrapper';
+import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
+import { InvoiceReceivingComponent } from './invoice-receiving/invoice-receiving.component';
+
+const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
+  // Change this to your upload POST address:
+  url: 'https://httpbin.org/post',
+  maxFilesize: 50,
+  acceptedFiles: 'image/*'
+};
 
 @NgModule({
   declarations: [
     ListComponent,
     OverviewComponent,
-    CreateComponent
+    CreateComponent,
+    GenerateInvoiceComponent,
+    InvoiceReceivingComponent
   ],
   imports: [
     CommonModule,
@@ -44,10 +62,16 @@ import { InvoicingRoutingModule } from './invoicing-routing.module';
     BsDatepickerModule.forRoot(),
     NgxMaskDirective,
     NgxMaskPipe,
-    InvoicingRoutingModule
+    InvoicingRoutingModule,
+    DropzoneModule,
+    FlatpickrModule.forRoot(),
   ],
   providers: [
     provideNgxMask(),
+    {
+      provide: DROPZONE_CONFIG,
+      useValue: DEFAULT_DROPZONE_CONFIG
+    }
   ]
 })
 export class InvoicingModule { }

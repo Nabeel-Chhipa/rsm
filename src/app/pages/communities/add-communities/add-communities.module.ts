@@ -17,23 +17,6 @@ import { SimplebarAngularModule } from 'simplebar-angular';
 // Select Droup down
 import { NgSelectModule } from '@ng-select/ng-select';
 
-// Count To
-import { CountUpModule } from 'ngx-countup';
-
-// Range Slider
-import { NgxSliderModule } from 'ngx-slider-v2';
-
-// Swiper Slider
-import { SlickCarouselModule } from 'ngx-slick-carousel';
-// Ck Editer
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
-
-// Apex Chart Package
-import { NgApexchartsModule } from 'ng-apexcharts';
-
-// Leaflet Map
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-
 // Bootstrap Component
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
@@ -72,18 +55,12 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     PaginationModule.forRoot(),
     ModalModule.forRoot(),
     AccordionModule.forRoot(),
-    SlickCarouselModule,
     SimplebarAngularModule,
     TooltipModule.forRoot(),
-    NgApexchartsModule,
-    CountUpModule,
     AlertModule.forRoot(),
     NgSelectModule,
-    NgxSliderModule,
-    CKEditorModule,
     BsDatepickerModule.forRoot(),
     ProgressbarModule.forRoot(),
-    LeafletModule,
     RatingModule.forRoot(),
     DropzoneModule,
     FlatpickrModule.forRoot()

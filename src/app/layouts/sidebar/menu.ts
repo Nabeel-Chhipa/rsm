@@ -109,8 +109,29 @@ export const MENU: MenuItem[] = [
             {
                 id: 11,
                 label: 'MENUITEMS.COMMUNITIES.LIST.INVOICING',
-                link: '/communities/invoicing/list',
-                parentId: 8
+                // link: '/communities/invoicing/list',
+                parentId: 8,
+                isCollapsed: true,
+                subItems: [
+                    {
+                        id: 11.1,
+                        label: 'MENUITEMS.COMMUNITIES.LIST.INVOICE_LIST',
+                        link: '/communities/invoicing/list',
+                        parentId: 11
+                    },
+                    {
+                        id: 11.2,
+                        label: 'MENUITEMS.COMMUNITIES.LIST.GENERATE_INVOICE',
+                        link: '/communities/invoicing/generate-invoice',
+                        parentId: 11
+                    },
+                    {
+                        id: 11.3,
+                        label: 'MENUITEMS.COMMUNITIES.LIST.INVOICE_RECEIVING',
+                        link: '/communities/invoicing/invoice-receiving',
+                        parentId: 11
+                    },
+                ]
             },
             {
                 id: 12,
@@ -187,7 +208,7 @@ export const MENU: MenuItem[] = [
             {
                 id: 24,
                 label: 'MENUITEMS.COMMUNITIES.LIST.RESIDENT_MANAGEMENT',
-                link: '/',
+                link: '/communities/resident/',
                 parentId: 8
             },
         ]
