@@ -211,6 +211,18 @@ export const MENU: MenuItem[] = [
                 link: '/communities/resident/',
                 parentId: 8
             },
+            {
+                id: 55,
+                label: 'MENUITEMS.COMMUNITIES.LIST.TENANT_SETUP',
+                link: '/communities/tenant/',
+                parentId: 8
+            },
+            {
+                id: 56,
+                label: 'MENUITEMS.COMMUNITIES.LIST.INCOME_TYPES',
+                link: '/communities/income-types/',
+                parentId: 8
+            },
         ]
     },
     

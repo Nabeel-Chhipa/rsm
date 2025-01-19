@@ -1,0 +1,341 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Tenant Setup" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<!-- Tenant Detail  -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <h5 class="card-title mb-3">Tenant Detail</h5>
+                    </div>
+                    <div class="col-xxl-12">
+                        <form class="tablelist-form" novalidate autocomplete="off">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="family-code-input" class="form-label">Family Code</label>
+                                        <input type="text" id="family-code-input" formControlName="familyCode"
+                                            class="form-control" placeholder="Enter Family Code">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="family-title-input" class="form-label">Family Title</label>
+                                        <input type="text" id="family-title-input" formControlName="familyTitle"
+                                            class="form-control" placeholder="Enter Family Title">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="resident-of-select" class="form-label">Resident Of<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" id="resident-of-select"
+                                            formControlName="residentOf">
+                                            <option value="">Select Resident Of</option>
+                                            @for(resident of residentOf; track $index) {
+                                            <option value=`{resident.name}`>{{resident.name}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hstack gap-2 justify-content-end mb-3">
+                                <button class="btn btn-primary">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </div><!--end row-->
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->
+
+
+<!-- Resident Detail  -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <h5 class="card-title mb-3">Resident Detail</h5>
+                    </div><!--end col-->
+                    <div class="col-xxl-12">
+                        <form class="tablelist-form" novalidate autocomplete="off">
+                            <div id="alert-error-msg" class="d-none alert alert-danger py-2"></div>
+                            <input type="hidden" id="id-field">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Photograph <span class="text-danger">*</span></label>
+                                        <dropzone class="dropzone" [config]="dropzoneConfig"
+                                            [message]="'Drop files here or click to upload.'"
+                                            (success)="onUploadSuccess($event)"></dropzone>
+                                        @if (uploadedFiles) {
+                                        <ul class="list-unstyled mb-0" id="dropzone-preview">
+                                            @for (file of uploadedFiles; track $index) {
+                                            <li class="mt-2" id="dropzone-preview-list">
+                                                <div class="border rounded">
+                                                    <div class="d-flex p-2">
+                                                        <div class="flex-shrink-0 me-3">
+                                                            <div class="avatar-sm bg-light rounded p-2">
+                                                                @if (file.dataURL) {
+                                                                <img class="img-fluid rounded d-block"
+                                                                    [src]="file.dataURL" alt="Dropzone-Image" />
+                                                                }@else{
+                                                                <img class="img-fluid rounded d-block" [src]="file"
+                                                                    alt="Dropzone-Image" />
+                                                                }
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-grow-1">
+                                                            <div class="pt-1">
+                                                                @if (file.name) { <h5 class="fs-md mb-1">{{ file.name }}
+                                                                </h5>}
+                                                                @if (file.size) { <p class="fs-sm text-muted mb-0">{{
+                                                                    file.size }}</p>}
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-shrink-0 ms-3">
+                                                            <button (click)="removeFile(file)"
+                                                                class="btn btn-sm btn-danger">Delete</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            }
+                                        </ul>
+                                        }
+                                        <!-- end dropzon-preview -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Other Docs <span class="text-danger">*</span></label>
+                                        <dropzone class="dropzone" [config]="dropzoneConfig"
+                                            [message]="'Drop files here or click to upload.'"
+                                            (success)="onUploadSuccess($event)"></dropzone>
+                                        @if (uploadedFiles) {
+                                        <ul class="list-unstyled mb-0" id="dropzone-preview">
+                                            @for (file of uploadedFiles; track $index) {
+                                            <li class="mt-2" id="dropzone-preview-list">
+                                                <div class="border rounded">
+                                                    <div class="d-flex p-2">
+                                                        <div class="flex-shrink-0 me-3">
+                                                            <div class="avatar-sm bg-light rounded p-2">
+                                                                @if (file.dataURL) {
+                                                                <img class="img-fluid rounded d-block"
+                                                                    [src]="file.dataURL" alt="Dropzone-Image" />
+                                                                }@else{
+                                                                <img class="img-fluid rounded d-block" [src]="file"
+                                                                    alt="Dropzone-Image" />
+                                                                }
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-grow-1">
+                                                            <div class="pt-1">
+                                                                @if (file.name) { <h5 class="fs-md mb-1">{{ file.name }}
+                                                                </h5>}
+                                                                @if (file.size) { <p class="fs-sm text-muted mb-0">{{
+                                                                    file.size }}</p>}
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-shrink-0 ms-3">
+                                                            <button (click)="removeFile(file)"
+                                                                class="btn btn-sm btn-danger">Delete</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            }
+                                        </ul>
+                                        }
+                                        <!-- end dropzon-preview -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="family" class="form-label">Family<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" id="family" formControlName="family">
+                                            <option value="">Select Family</option>
+                                            @for(family of family; track $index) {
+                                            <option value=`{family.name}`>{{family.name}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="name-input" class="form-label">Name</label>
+                                        <input type="text" id="name-input" formControlName="name" class="form-control"
+                                            placeholder="Enter Name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="cnic-input" class="form-label">CNIC</label>
+                                        <input type="number" id="cnic-input" formControlName="cnic" class="form-control"
+                                            placeholder="Enter CNIC Number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="cell-no-input" class="form-label">Cell No</label>
+                                        <input type="number" id="cell-no-input" formControlName="cellNo"
+                                            class="form-control" placeholder="Enter Cell Number">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="email-input" class="form-label">Email</label>
+                                        <input type="email" id="email-input" formControlName="email"
+                                            class="form-control" placeholder="Enter Email Address">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="company-input" class="form-label">Company</label>
+                                        <input type="text" id="company-input" formControlName="Company"
+                                            class="form-control" placeholder="Enter Company Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="licence-no-input" class="form-label">Licence No</label>
+                                        <input type="number" id="licence-no-input" formControlName="licenceNo"
+                                            class="form-control" placeholder="Enter Licence Number">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="comments-input" class="form-label">Comments</label>
+                                        <input type="text" id="comments-input" formControlName="comments"
+                                            class="form-control" placeholder="Enter Comments">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="vehicle-detail-input" class="form-label">Vehicle Detail</label>
+                                        <input type="text" id="vehicle-detail-input" formControlName="vehicleDetail"
+                                            class="form-control" placeholder="Enter Vehicle Detail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="vehicle-no-input" class="form-label">Vehicle No</label>
+                                        <input type="text" id="vehicle-no-input" formControlName="vehicleNo"
+                                            class="form-control" placeholder="Enter Vehicle Number">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="vehicle-detail-input" class="form-label">Vehicle Detail</label>
+                                        <input type="text" id="vehicle-detail-input" formControlName="vehicleDetail"
+                                            class="form-control" placeholder="Enter Vehicle Detail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hstack gap-2 justify-content-end mb-3">
+                                <button class="btn btn-primary">Add New</button>
+                                <button class="btn btn-primary">Search</button>
+                            </div>
+                        </form>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->
+
+
+<!-- Family Member  -->
+ <div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body mt-3">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <h5 class="card-title mb-3">Family Member</h5>
+                    </div><!--end col-->
+                </div>
+                <div class="table-responsive table-card p-3">
+                    <table class="table table-centered align-middle table-custom-effect table-nowrap mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkAll" [(ngModel)]="masterSelected"
+                                            (change)="checkUncheckAll($event)">
+                                        <label class="form-check-label" for="checkAll"></label>
+                                    </div>
+                                </th>
+                                <th scope="col" class="sort cursor-pointer">Family</th>
+                                <th scope="col" class="sort cursor-pointer">Unit #</th>
+                                <th scope="col" class="sort cursor-pointer">Name</th>
+                                <th scope="col" class="sort cursor-pointer">Relation</th>
+                                <th scope="col" class="sort cursor-pointer">Age</th>
+                                <th scope="col" class="sort cursor-pointer">Remarks</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list form-check-all" id="invoice-list-data">
+                            @for (data of familyMember; track $index) {
+                            <tr id="l_{{data.id}}">
+                                <td>
+                                    <div class="form-check"> <input class="form-check-input" type="checkbox" name="checkAll"
+                                            value="{{data.id}}" [(ngModel)]="data.states" (change)="onCheckboxChange($event)">
+                                        <label class="form-check-label"></label> </div>
+                                </td>
+                                <td class="family">{{data.family}}</td>
+                                <td class="unit">{{data.unit}}</td>
+                                <td class="name">{{data.name}}</td>
+                                <td class="relation">{{data.relation}}</td>
+                                <td class="age">{{data.age}}</td>
+                                <td class="Remarks">{{data.Remarks}}</td>
+                                <td>
+                                    <ul class="d-flex gap-2 list-unstyled mb-0">
+                                        <li><a href="javascript:void(0);" class="btn btn-subtle-secondary btn-icon btn-sm" routerLink="/communities/invoicing/create" data-edit-id="24301901"><i class="ph-pencil"></i></a> </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            }
+                        </tbody><!-- end tbody -->
+                    </table><!-- end table -->
+            
+                    <div class="noresult" style="display: none;">
+                        <div class="text-center py-4">
+                            <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                            <p class="text-muted mb-0">We've searched more than 6+ invoice We did not find any invoice
+                                for you search.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center mt-4 pt-3" id="pagination-element">
+                    <div class="col-sm">
+                        <div class="text-muted text-center text-sm-start">
+                            Showing <span class="fw-semibold">{{familyMember.length}}</span> of <span
+                                class="fw-semibold">{{familyMember.length}}</span> Results
+                        </div>
+                    </div><!--end col-->
+                    <div class="col-sm-auto mt-3 mt-sm-0">
+                        <pagination class="pagination-wrap hstack justify-content-center gap-2" [itemsPerPage]="10"
+                            (pagrChanged)="pageChanged($event)"></pagination>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div>
+        </div>
+    </div>
+ </div>

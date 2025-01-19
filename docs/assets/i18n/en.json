@@ -50,7 +50,9 @@
         "SIGN-ON": "Sign-on",
         "STAFF_MANAGEMENT": "Staff Management",
         "RESIDENT_MANAGEMENT": "Resident Management",
-        "ADD_COMMUNITIES": "Add Communities"
+        "ADD_COMMUNITIES": "Add Communities",
+        "TENANT_SETUP": "Tenant Setup",
+        "INCOME_TYPES": "Income Types"
       }
     },
     "PEOPLE": {

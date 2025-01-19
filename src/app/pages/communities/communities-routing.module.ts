@@ -58,6 +58,14 @@ const routes: Routes = [
   {
     path: 'add-communities',
     loadChildren: () => import('./add-communities/add-communities.module').then(m => m.AddCommunitiesModule)
+  },
+  {
+    path: 'tenant',
+    loadChildren: () => import('./tenant-setup/tenant-setup.module').then(m => m.TenantSetupModule)
+  },
+  {
+    path: 'income-types',
+    loadChildren: () => import('./income-types/income-types.module').then(m => m.IncomeTypesModule)
   }
 ];
 

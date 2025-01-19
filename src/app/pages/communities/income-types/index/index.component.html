@@ -1,0 +1,302 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Income Types" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<!-- Income Nature  -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <!-- <div class="col-xxl-12">
+                        <h5 class="card-title mb-3">Income Types</h5>
+                    </div> -->
+                    <div class="col-xxl-12">
+                        <form class="tablelist-form" novalidate autocomplete="off">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="nature-input" class="form-label">Nature</label>
+                                        <input type="text" id="nature-input" formControlName="nature"
+                                            class="form-control" placeholder="Enter nature">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="hstack gap-2 justify-content-end mb-3">
+                                <button class="btn btn-primary">Add</button>
+                            </div> -->
+                        </form>
+                    </div>
+                </div>
+                <!--end row-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body mt-3">
+                                <!-- <div class="row">
+                                    <div class="col-xxl-12">
+                                        <h5 class="card-title mb-3">Family Member</h5>
+                                    </div>
+                                </div> -->
+                                <div class="table-responsive table-card">
+                                    <table class="table table-centered align-middle table-custom-effect table-nowrap mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th scope="col" class="sort cursor-pointer">Nature</th>
+                                                <th scope="col" class="sort cursor-pointer">Nature Dwscription</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="list form-check-all" id="invoice-list-data">
+                                            @for (data of nature; track $index) {
+                                            <tr id="l_{{data.id}}">
+                                                <td class="family">{{data.nature}}</td>
+                                                <td class="family">{{data.nature_description}}</td>
+                                            </tr>
+                                            }
+                                        </tbody><!-- end tbody -->
+                                    </table><!-- end table -->
+                            
+                                    <div class="noresult" style="display: none;">
+                                        <div class="text-center py-4">
+                                            <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                                            <p class="text-muted mb-0">We've searched more than 6+ invoice We did not find any invoice
+                                                for you search.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-4 pt-3" id="pagination-element">
+                                    <div class="col-sm">
+                                        <div class="text-muted text-center text-sm-start">
+                                            Showing <span class="fw-semibold">{{nature.length}}</span> of <span
+                                                class="fw-semibold">{{nature.length}}</span> Results
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-sm-auto mt-3 mt-sm-0">
+                                        <pagination class="pagination-wrap hstack justify-content-center gap-2" [itemsPerPage]="10"
+                                            (pagrChanged)="pageChanged($event)"></pagination>
+                                    </div><!--end col-->
+                                </div><!--end row-->
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->
+
+
+<!-- Income Category  -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <!-- <div class="col-xxl-12">
+                        <h5 class="card-title mb-3">Income Types</h5>
+                    </div> -->
+                    <div class="col-xxl-12">
+                        <form class="tablelist-form" novalidate autocomplete="off">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="nature-of-select" class="form-label">Nature<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" id="nature-of-select"
+                                            formControlName="nature">
+                                            <option value="">Select Nature</option>
+                                            @for(nature of nature; track $index) {
+                                            <option value=`{nature.nature_description}`>{{nature.nature_description}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="category-input" class="form-label">Category</label>
+                                        <input type="text" id="category-input" formControlName="category"
+                                            class="form-control" placeholder="Enter Category">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="hstack gap-2 justify-content-end mb-3">
+                                <button class="btn btn-primary">Add</button>
+                            </div> -->
+                        </form>
+                    </div>
+                </div>
+                <!--end row-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body mt-3">
+                                <!-- <div class="row">
+                                    <div class="col-xxl-12">
+                                        <h5 class="card-title mb-3">Family Member</h5>
+                                    </div>
+                                </div> -->
+                                <div class="table-responsive table-card">
+                                    <table class="table table-centered align-middle table-custom-effect table-nowrap mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th scope="col" class="sort cursor-pointer">Nature</th>
+                                                <th scope="col" class="sort cursor-pointer">Category</th>
+                                                <th scope="col" class="sort cursor-pointer">Nature Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="list form-check-all" id="invoice-list-data">
+                                            @for (data of category; track $index) {
+                                            <tr id="l_{{data.id}}">
+                                                <td class="family">{{data.nature}}</td>
+                                                <td class="family">{{data.category}}</td>
+                                                <td class="family">{{data.category_description}}</td>
+                                            </tr>
+                                            }
+                                        </tbody><!-- end tbody -->
+                                    </table><!-- end table -->
+                            
+                                    <div class="noresult" style="display: none;">
+                                        <div class="text-center py-4">
+                                            <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                                            <p class="text-muted mb-0">We've searched more than 6+ invoice We did not find any invoice
+                                                for you search.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-4 pt-3" id="pagination-element">
+                                    <div class="col-sm">
+                                        <div class="text-muted text-center text-sm-start">
+                                            Showing <span class="fw-semibold">{{category.length}}</span> of <span
+                                                class="fw-semibold">{{category.length}}</span> Results
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-sm-auto mt-3 mt-sm-0">
+                                        <pagination class="pagination-wrap hstack justify-content-center gap-2" [itemsPerPage]="10"
+                                            (pagrChanged)="pageChanged($event)"></pagination>
+                                    </div><!--end col-->
+                                </div><!--end row-->
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->
+
+
+<!-- Income Type  -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <!-- <div class="col-xxl-12">
+                        <h5 class="card-title mb-3">Income Types</h5>
+                    </div> -->
+                    <div class="col-xxl-12">
+                        <form class="tablelist-form" novalidate autocomplete="off">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="nature-of-select" class="form-label">Nature<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" id="nature-of-select"
+                                            formControlName="nature">
+                                            <option value="">Select Nature</option>
+                                            @for(nature of nature; track $index) {
+                                            <option value=`{nature.nature_description}`>{{nature.nature_description}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="category-of-select" class="form-label">Category<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" id="category-of-select"
+                                            formControlName="category">
+                                            <option value="">Select Category</option>
+                                            @for(category of category; track $index) {
+                                            <option value=`{category.category_description}`>{{category.category_description}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="category-input" class="form-label">Category</label>
+                                        <input type="text" id="category-input" formControlName="category"
+                                            class="form-control" placeholder="Enter Category">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="hstack gap-2 justify-content-end mb-3">
+                                <button class="btn btn-primary">Add</button>
+                            </div> -->
+                        </form>
+                    </div>
+                </div>
+                <!--end row-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body mt-3">
+                                <!-- <div class="row">
+                                    <div class="col-xxl-12">
+                                        <h5 class="card-title mb-3">Family Member</h5>
+                                    </div>
+                                </div> -->
+                                <div class="table-responsive table-card">
+                                    <table class="table table-centered align-middle table-custom-effect table-nowrap mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th scope="col" class="sort cursor-pointer">Nature</th>
+                                                <th scope="col" class="sort cursor-pointer">Category</th>
+                                                <th scope="col" class="sort cursor-pointer">Category Description</th>
+                                                <th scope="col" class="sort cursor-pointer">Type</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="list form-check-all" id="invoice-list-data">
+                                            @for (data of type; track $index) {
+                                            <tr id="l_{{data.id}}">
+                                                <td class="family">{{data.nature}}</td>
+                                                <td class="family">{{data.category}}</td>
+                                                <td class="family">{{data.category_description}}</td>
+                                                <td class="family">{{data.type}}</td>
+                                            </tr>
+                                            }
+                                        </tbody><!-- end tbody -->
+                                    </table><!-- end table -->
+                            
+                                    <div class="noresult" style="display: none;">
+                                        <div class="text-center py-4">
+                                            <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                                            <p class="text-muted mb-0">We've searched more than 6+ invoice We did not find any invoice
+                                                for you search.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-4 pt-3" id="pagination-element">
+                                    <div class="col-sm">
+                                        <div class="text-muted text-center text-sm-start">
+                                            Showing <span class="fw-semibold">{{type.length}}</span> of <span
+                                                class="fw-semibold">{{type.length}}</span> Results
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-sm-auto mt-3 mt-sm-0">
+                                        <pagination class="pagination-wrap hstack justify-content-center gap-2" [itemsPerPage]="10"
+                                            (pagrChanged)="pageChanged($event)"></pagination>
+                                    </div><!--end col-->
+                                </div><!--end row-->
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->
