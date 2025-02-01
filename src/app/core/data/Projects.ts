@@ -74,7 +74,7 @@ const leadData = [
     {
         id: '2',
         img: 'assets/images/users/avatar-3.jpg',
-        name: 'Josefa Weissnat',
+        name: 'Ayesha Khan',
         phone: '(53) 3035-3100',
         score: '418',
         location: 'California, USA',

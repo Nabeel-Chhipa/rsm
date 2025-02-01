@@ -34,7 +34,7 @@ const orderList = [
         order_date: "30 Jan, 2023",
         delivery_date: "10 Feb, 2023",
         product: "Fossil gen 5E smart watch",
-        customer: "Dianna Bogan",
+        customer: "Zainab Fatima",
         shop: [{
             img: "assets/images/companies/img-2.png",
             name: "Brand Infosys"
@@ -49,7 +49,7 @@ const orderList = [
         order_date: "25 Jan, 2023",
         delivery_date: "03 Feb, 2023",
         product: "Super bass blutooth wireless headphone",
-        customer: "Josefa Weissnat",
+        customer: "Ayesha Khan",
         shop: [{
             img: "assets/images/companies/img-3.png",
             name: "Brand Infosys"
@@ -64,7 +64,7 @@ const orderList = [
         order_date: "19 Jan, 2023",
         delivery_date: "27 Jan, 2023",
         product: "Willage volleyball ball size 4",
-        customer: "Ophelia Steuber",
+        customer: "Danish Ali",
         shop: [{
             img: "assets/images/companies/img-4.png",
             name: "Themesbrand"
@@ -124,7 +124,7 @@ const orderList = [
         order_date: "22 Dec, 2022",
         delivery_date: "28 Dec, 2022",
         product: "Jeans blue men boxer",
-        customer: "Axel Kozey",
+        customer: "Sana Javed",
         shop: [{
             img: "assets/images/companies/img-4.png",
             name: "Themesbrand"
@@ -154,7 +154,7 @@ const orderList = [
         order_date: "25 Jan, 2023",
         delivery_date: "03 Feb, 2023",
         product: "Super bass blutooth wireless headphone",
-        customer: "Josefa Weissnat",
+        customer: "Ayesha Khan",
         shop: [{
             img: "assets/images/companies/img-3.png",
             name: "Brand Infosys"

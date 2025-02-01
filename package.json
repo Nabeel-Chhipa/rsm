@@ -22,7 +22,7 @@
     "@angular/forms": "^18.0.3",
     "@angular/google-maps": "^18.0.3",
     "@angular/platform-browser": "^18.0.3",
-    "@angular/platform-browser-dynamic": "^18.0.3", 
+    "@angular/platform-browser-dynamic": "^18.0.3",
     "@angular/router": "^18.0.3",
     "@asymmetrik/ngx-leaflet": "^18.0.1",
     "@ckeditor/ckeditor5-angular": "^7.0.1",

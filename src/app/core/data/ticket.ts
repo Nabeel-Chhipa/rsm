@@ -252,7 +252,7 @@ const ticketList = [
             }
         ],
         ticketTitle: "Sending props as strings (instead of numbers)",
-        clientName: "Ophelia Steuber",
+        clientName: "Danish Ali",
         createDate: "06 Apr, 2023",
         dueDate: "12 Apr, 2023",
         priority: "High",

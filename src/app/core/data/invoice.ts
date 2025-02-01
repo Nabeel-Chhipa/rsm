@@ -38,7 +38,7 @@ const invoicesList = [
     }, {
         id: 5,
         invoice_no: '24301905',
-        customer: 'Ophelia Steuber',
+        customer: 'Danish Ali',
         email: "ophelia@rsm.com",
         createDate: "06 Apr, 2023",
         dueDate: "12 Apr, 2023",

@@ -31,7 +31,7 @@ const listingGrid = [
         rating: "4.9",
         price: "3495.76",
         starred: true,
-        agent: "Axel Kozey",
+        agent: "Sana Javed",
         requirement: "Sale"
     }, {
         id: 3,
@@ -65,7 +65,7 @@ const listingGrid = [
         rating: "4.9",
         price: "3895.39",
         starred: false,
-        agent: "Josefa Weissnat",
+        agent: "Ayesha Khan",
         requirement: "Sale"
     }, {
         id: 5,
@@ -99,7 +99,7 @@ const listingGrid = [
         rating: "4.8",
         price: "1249.99",
         starred: false,
-        agent: "Jerry Emard",
+        agent: "Hira Shah",
         requirement: "Rent"
     }, {
         id: 7,
@@ -133,7 +133,7 @@ const listingGrid = [
         rating: "4.9",
         price: "3495.76",
         starred: true,
-        agent: "Axel Kozey",
+        agent: "Sana Javed",
         requirement: "Sale"
     }, {
         id: 9,
@@ -167,7 +167,7 @@ const listingGrid = [
         rating: "4.5",
         price: "3698.99",
         starred: false,
-        agent: "Jerry Emard",
+        agent: "Hira Shah",
         requirement: "Rent"
     }, {
         id: 11,
@@ -184,7 +184,7 @@ const listingGrid = [
         rating: "4.5",
         price: "2451.39",
         starred: true,
-        agent: "Josefa Weissnat",
+        agent: "Ayesha Khan",
         requirement: "Sale"
     }
 ];
@@ -270,7 +270,7 @@ const estateList = [
         rating: "4.9",
         price: "3495.76",
         starred: true,
-        agent: "Axel Kozey",
+        agent: "Sana Javed",
         requirement: "Sale"
     }, {
         id: 3,
@@ -304,7 +304,7 @@ const estateList = [
         rating: "4.9",
         price: "3895.39",
         starred: false,
-        agent: "Josefa Weissnat",
+        agent: "Ayesha Khan",
         requirement: "Sale"
     }, {
         id: 5,
@@ -338,7 +338,7 @@ const estateList = [
         rating: "4.8",
         price: "1249.99",
         starred: false,
-        agent: "Jerry Emard",
+        agent: "Hira Shah",
         requirement: "Rent"
     }, {
         id: 7,
@@ -372,7 +372,7 @@ const estateList = [
         rating: "4.9",
         price: "3495.76",
         starred: true,
-        agent: "Axel Kozey",
+        agent: "Sana Javed",
         requirement: "Sale"
     }, {
         id: 9,
@@ -406,7 +406,7 @@ const estateList = [
         rating: "4.5",
         price: "3698.99",
         starred: false,
-        agent: "Jerry Emard",
+        agent: "Hira Shah",
         requirement: "Rent"
     }, {
         id: 11,
@@ -423,7 +423,7 @@ const estateList = [
         rating: "4.5",
         price: "2451.39",
         starred: true,
-        agent: "Josefa Weissnat",
+        agent: "Ayesha Khan",
         requirement: "Sale"
     }
 ];

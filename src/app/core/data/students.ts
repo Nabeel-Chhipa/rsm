@@ -94,7 +94,7 @@ const cources = [{
     language: 'English',
     price: '$264.71',
     profile: 'assets/images/users/48/avatar-6.jpg',
-    name: 'Ophelia Steuber',
+    name: 'Danish Ali',
     rating: '4.8',
     progresscolor: 'warning',
     progressvalue: 53,

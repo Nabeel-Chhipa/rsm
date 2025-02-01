@@ -325,24 +325,24 @@
                                 </td>
                                 <td>
                                     <span class="badge status"
-                                        [ngClass]="{'bg-danger-subtle text-danger': data.status === 'Sale', 'bg-info-subtle text-info': data.status === 'Rent'}">{{data.status}}</span>
+                                        [ngClass]="{'bg-danger-subtle text-danger': data.status === 'Tenant', 'bg-info-subtle text-info': data.status === 'Owner', 'bg-muted-subtle text-dark': data.status === 'Landlord'}">{{data.status}}</span>
                                 </td>
                                 <td>
                                     <ul class="d-flex gap-2 list-unstyled mb-0">
                                         <li>
                                             <a routerLink="/real-estate/property-overview"
                                                 class="btn btn-subtle-primary btn-icon btn-sm "><i
-                                                    class="ph-eye"></i></a>
+                                                    class="ph ph-eye"></i></a>
                                         </li>
                                         <li>
                                             <a href="javascript:void(0);"
                                                 class="btn btn-subtle-secondary btn-icon btn-sm edit-item-btn"><i
-                                                    class="ph-pencil"></i></a>
+                                                    class="ph ph-pencil"></i></a>
                                         </li>
                                         <li>
                                             <a href="javascript:void(0);"
                                                 class="btn btn-subtle-danger btn-icon btn-sm remove-item-btn"><i
-                                                    class="ph-trash"></i></a>
+                                                    class="ph ph-trash"></i></a>
                                         </li>
                                     </ul>
                                 </td>
@@ -371,7 +371,7 @@
                     <a href="javascript:void(0);" class="text-muted" (click)="gotoCustomerFeedback()">View All <i
                             class="bi bi-chevron-right align-baseline"></i></a>
                 </div>
-            </div>
+            </div> 
             <div class="card-body px-0">
                 <ngx-simplebar style="max-height: 395px;">
                     @for (data of feedbackData; track $index) {
@@ -540,7 +540,7 @@
                                     <p class="text-muted mb-0"><b>$985.32k</b> Total unpaid invoices</p>
                                 </div>
                                 <div class="flex-shrink-0">
-                                    <a routerLink="/ecommerce/seller-overview" class="link-effect">View Profile <i class="bi bi-arrow-right align-baseline ms-1"></i></a>
+                                    <a routerLink="/finance/receivable" class="link-effect">View All <i class="bi bi-arrow-right align-baseline ms-1"></i></a>
                                 </div>
                             </div>
                             <div tooltip="$234.95 Paid Amount">
@@ -641,7 +641,7 @@
                                                 class="avatar-xs rounded-circle acitivity-avatar">
                                         </div>
                                         <div class="flex-grow-1 ms-3">
-                                            <h6 class="mb-1 lh-base">Purchased by James Price</h6>
+                                            <h6 class="mb-1 lh-base">Purchased by Jameel</h6>
                                             <p class="text-muted mb-2">Product noise evolve smartwatch </p>
                                             <small class="mb-0 text-muted">05:57 AM Today</small>
                                         </div>
@@ -652,7 +652,7 @@
                                                 class="avatar-xs rounded-circle acitivity-avatar">
                                         </div>
                                         <div class="flex-grow-1 ms-3">
-                                            <h6 class="mb-1 lh-base">Natasha Carey have liked the products</h6>
+                                            <h6 class="mb-1 lh-base">Adnan have liked the products</h6>
                                             <p class="text-muted mb-2">Allow users to like products in your WooCommerce
                                                 store.</p>
                                             <small class="mb-0 text-muted">25 Dec, 2022</small>
@@ -665,7 +665,7 @@
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h6 class="mb-1 lh-base">Today offers by <a href="javascript:void(0);"
-                                                    class="link-secondary">Digitech Galaxy</a></h6>
+                                                    class="link-secondary">Umair</a></h6>
                                             <p class="text-muted mb-2">Offer is valid on orders of $230 Or above for
                                                 selected products only.</p>
                                             <small class="mb-0 text-muted">12 Dec, 2022</small>
@@ -678,7 +678,7 @@
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h6 class="mb-1 lh-base">Favorites Product</h6>
-                                            <p class="text-muted mb-2">Esther James have favorites product.</p>
+                                            <p class="text-muted mb-2">Shoaib have favorites product.</p>
                                             <small class="mb-0 text-muted">25 Nov, 2022</small>
                                         </div>
                                     </div>
@@ -735,12 +735,12 @@
                                                         <img src="assets/images/users/32/avatar-1.jpg" alt=""
                                                             class="avatar-xxs rounded-circle">
                                                     </div>
-                                                    <div class="flex-grow-1">Dianna Bogan</div>
+                                                    <div class="flex-grow-1">Zainab Fatima</div>
                                                 </div>
                                             </td>
-                                            <td>United Kingdom</td>
+                                            <td>Mechanic</td>
                                             <td>
-                                                +(86) 9985-9220
+                                                0311-3456789
                                             </td>
                                         </tr><!-- end tr -->
                                         <tr>
@@ -753,9 +753,9 @@
                                                     <div class="flex-grow-1">Jansh Brown</div>
                                                 </div>
                                             </td>
-                                            <td>Germany</td>
+                                            <td>Electrician</td>
                                             <td>
-                                                +(27) 3041-1766
+                                                0305-8765432
                                             </td>
                                         </tr><!-- end tr -->
                                         <tr>
@@ -768,9 +768,9 @@
                                                     <div class="flex-grow-1">Ayaan Bowen</div>
                                                 </div>
                                             </td>
-                                            <td>Brazil</td>
+                                            <td>Merchandiser</td>
                                             <td>
-                                                +(51) 3233-7909
+                                                0304-2345678
                                             </td>
                                         </tr><!-- end tr -->
                                         <tr>
@@ -783,9 +783,9 @@
                                                     <div class="flex-grow-1">Prezy Mark</div>
                                                 </div>
                                             </td>
-                                            <td>Spain</td>
+                                            <td>Water Tanker</td>
                                             <td>
-                                                +(48) 3877-9000
+                                                0303-5678901
                                             </td>
                                         </tr><!-- end tr -->
                                         <tr>
@@ -798,9 +798,9 @@
                                                     <div class="flex-grow-1">Vihan Hudda</div>
                                                 </div>
                                             </td>
-                                            <td>Brazil</td>
+                                            <td>carpenter</td>
                                             <td>
-                                                +(11) 3885-1022
+                                                0302-9876543
                                             </td>
                                         </tr><!-- end tr -->
                                         <tr>
@@ -813,9 +813,9 @@
                                                     <div class="flex-grow-1">Uriel King</div>
                                                 </div>
                                             </td>
-                                            <td>USA</td>
+                                            <td>Plumber</td>
                                             <td>
-                                                +(21) 2345-6789
+                                                0301-1234567
                                             </td>
                                         </tr><!-- end tr -->
                                     </tbody><!-- end tbody -->

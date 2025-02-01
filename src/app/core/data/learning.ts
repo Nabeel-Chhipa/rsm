@@ -292,7 +292,7 @@ const instructorList = [
     }, {
         id: 6,
         img: "assets/images/users/32/avatar-5.jpg",
-        name: "Ophelia Steuber",
+        name: "Danish Ali",
         total_course: "485",
         email: "ophelia@rsm.com",
         experience: "6 Years",
