@@ -19,6 +19,9 @@ const routes: Routes = [
   },
   {
     path: 'finance', loadChildren: () => import('./finance/finance.module').then(m => m.FinanceModule)
+  },
+  {
+    path: 'reportsAnalytics', loadChildren: () => import('./reports-analytics/reports-analytics.module').then(m => m.ReportsAnalyticsModule)
   }
 ];
 

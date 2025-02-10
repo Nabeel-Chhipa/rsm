@@ -18,7 +18,7 @@ export class CreateComponent {
   invoices: any;
   submitted = false;
   InvoicesForm!: UntypedFormGroup;
-  paymentSign = "$";
+  paymentSign = "Rs.";
   subtotal = 0;
   taxRate = 0.18;
   shippingRate = 65.0;

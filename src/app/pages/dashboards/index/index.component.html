@@ -264,7 +264,10 @@
     <div class="col-xxl-9">
         <div class="card" id="propertyList">
             <div class="card-header align-items-center d-flex">
-                <h4 class="card-title mb-0 flex-grow-1">Recently Added Property</h4>
+                <h4 class="card-title mb-0 flex-grow-1">Properties</h4>
+                <div class="col-auto ms-auto">
+                    <button class="btn btn-secondary me-2 px-2 py-1" (click)="showAddProperty()"><i class="bi bi-house align-baseline me-1"></i> Add Property</button>
+                </div>
                 <div class="flex-shrink-0">
                     <div dropdown class="dropdown card-header-dropdown sortble-dropdown">
                         <a dropdownToggle class="text-reset dropdown-btn" href="javascript:void(0);">
@@ -275,9 +278,8 @@
                         <div *bsDropdownMenu class="dropdown-menu dropdown-menu-end">
                             <button class="dropdown-item sort" (click)="sortBy('name','Property Name')">Property
                                 Name</button>
-                            <button class="dropdown-item sort" (click)="sortBy('price','Price')">Price</button>
-                            <button class="dropdown-item sort" (click)="sortBy('agentname','Agent Name')">Agent
-                                Name</button>
+                            <!-- <button class="dropdown-item sort" (click)="sortBy('price','Price')">Price</button> -->
+                            <button class="dropdown-item sort" (click)="sortBy('resident','Resident')">Resident</button>
                             <button class="dropdown-item sort" (click)="sortBy('status','Status')">Status</button>
                         </div>
                     </div>
@@ -292,9 +294,9 @@
                                 <th scope="col" class="sort cursor-pointer" (click)="onSort('type')">Type</th>
                                 <th scope="col" class="sort cursor-pointer" (click)="onSort('name')">Property Name</th>
                                 <th scope="col" class="sort cursor-pointer" (click)="onSort('address')">Address</th>
-                                <th scope="col" class="sort cursor-pointer" (click)="onSort('agentname')">Agent Name
+                                <th scope="col" class="sort cursor-pointer" (click)="onSort('resident')">Resident
                                 </th>
-                                <th scope="col" class="sort cursor-pointer" (click)="onSort('price')">Price</th>
+                                <!-- <th scope="col" class="sort cursor-pointer" (click)="onSort('price')">Price</th> -->
                                 <th scope="col" class="sort cursor-pointer" (click)="onSort('status')">Status</th>
                                 <th scope="col" class="sort cursor-pointer">Action</th>
                             </tr>
@@ -319,10 +321,10 @@
                                 <td class="address">
                                     {{data.address}}
                                 </td>
-                                <td class="agent_name">{{data.agentname}}</td>
-                                <td class="price">
+                                <td class="resident">{{data.resident}}</td>
+                                <!-- <td class="price">
                                     <span class="fw-medium">{{data.price}}</span>
-                                </td>
+                                </td> -->
                                 <td>
                                     <span class="badge status"
                                         [ngClass]="{'bg-danger-subtle text-danger': data.status === 'Tenant', 'bg-info-subtle text-info': data.status === 'Owner', 'bg-muted-subtle text-dark': data.status === 'Landlord'}">{{data.status}}</span>
@@ -366,15 +368,46 @@
     <div class="col-xxl-3 col-lg-6">
         <div class="card">
             <div class="card-header d-flex align-items-center">
-                <h4 class="card-title mb-0 flex-grow-1">Customer Feedback</h4>
+                <h4 class="card-title mb-0 flex-grow-1">Communities</h4>
                 <div class="flex-shrink-0">
-                    <a href="javascript:void(0);" class="text-muted" (click)="gotoCustomerFeedback()">View All <i
-                            class="bi bi-chevron-right align-baseline"></i></a>
+                    <!-- <a href="javascript:void(0);" class="text-muted" (click)="gotoCustomerFeedback()">View All <i class="bi bi-chevron-right align-baseline"></i></a> -->
+                    <a href="javascript:void(0);" class="text-muted" (click)="gotoAddCommunities()">Add Communities<i class="bi bi-chevron-right align-baseline"></i></a>
                 </div>
             </div> 
             <div class="card-body px-0">
                 <ngx-simplebar style="max-height: 395px;">
-                    @for (data of feedbackData; track $index) {
+                    <div class="card border-bottom rounded-0 border-0 shadow-none mb-0">
+                        <div class="card-body">
+                            <div class="d-flex gap-2 mb-3">
+                                <div class="flex-shrink-0">
+                                    <img src="assets/images/real-estate/img-01.jpg" alt="" class="avatar-sm rounded">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="fs-md mb-1"><a href="javascript:void(0);" class="text-reset">Comm-3</a></h6>
+                                    <p class="text-muted mb-0">Karachi, Pakistan</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 mb-3">
+                                <div class="flex-shrink-0">
+                                    <img src="assets/images/real-estate/img-02.jpg" alt="" class="avatar-sm rounded">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="fs-md mb-1"><a href="javascript:void(0);" class="text-reset">Bahria Icon</a></h6>
+                                    <p class="text-muted mb-0">Karachi, Pakistan</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 mb-3">
+                                <div class="flex-shrink-0">
+                                    <img src="assets/images/real-estate/img-03.jpg" alt="" class="avatar-sm rounded">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="fs-md mb-1"><a href="javascript:void(0);" class="text-reset">Fortyne Center</a></h6>
+                                    <p class="text-muted mb-0">Karachi, Pakistan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @for (data of feedbackData; track $index) {
                     <div class="card border-bottom rounded-0 border-0 shadow-none mb-0">
                         <div class="card-body">
                             <div class="d-flex gap-2">
@@ -397,7 +430,7 @@
                             </div>
                         </div>
                     </div>
-                    }
+                    } -->
                 </ngx-simplebar>
             </div>
         </div><!--end card-->
@@ -828,3 +861,213 @@
         </div>
     </div><!--end col-->
 </div><!--end row-->
+
+
+<!-- Property Modal -->
+<div bsModal #addProperty="bs-modal" class="modal fade" id="addProperty">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addPropertyModalLabel">Add Community list</h5>
+                <button type="button" class="btn-close" (click)="addProperty.hide()"></button>
+            </div>
+
+            <form  [formGroup]="propertyForm" class="tablelist-form" novalidate autocomplete="off">
+                <div class="modal-body">
+                    <div id="alert-error-msg" class="d-none alert alert-danger py-2"></div>
+                    <input type="hidden" id="id-field">
+
+                    <div class="mb-3">
+                        <label class="form-label">Upload Image<span class="text-danger">*</span></label>
+                        <dropzone class="dropzone" [config]="dropzoneConfig" [message]="'Drop files here or click to upload.'" (success)="onUploadSuccess($event)"></dropzone>
+                        @if (uploadedFiles) {
+                        <ul class="list-unstyled mb-0" id="dropzone-preview">
+                            @for (file of uploadedFiles; track $index) {
+                            <li class="mt-2" id="dropzone-preview-list">
+                                <div class="border rounded">
+                                    <div class="d-flex flex-wrap gap-2 p-2">
+                                        <div class="flex-shrink-0 me-3">
+                                            <div class="avatar-sm bg-light rounded p-2">
+                                                @if (file.dataURL) {
+                                                <img class="img-fluid rounded d-block" [src]="file.dataURL" alt="Dropzone-Image" />
+                                                }@else {
+                                                <img class="img-fluid rounded d-block" [src]="file" alt="Dropzone-Image" />
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="pt-1">
+                                                @if (file.name) { <h5 class="fs-md mb-1">{{ file.name }}</h5>}
+                                                @if (file.size) {<p class="fs-sm text-muted mb-0">{{ file.size }}</p>}
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-3">
+                                            <button (click)="removeFile(file)" class="btn btn-sm btn-danger">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                        </ul>
+                        }
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="unit-input" class="form-label">Unit No<span class="text-danger">*</span></label>
+                        <input type="text" id="unit-input" formControlName="unitNo" class="form-control" placeholder="Enter Unit No" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="unit-title-input" class="form-label">Unit Title<span class="text-danger">*</span></label>
+                        <input type="text" id="unit-title-input" formControlName="unitTitle" class="form-control" placeholder="Enter Unit Title" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="unit-type-input" class="form-label">Unit Type<span class="text-danger">*</span></label>
+
+                        <select class="form-select" id="unit-type-input" formControlName="unitType">
+                            <option value="">Select Unit</option>
+                            @for(unit of unitType; track $index) {
+                                <option value=`{unit.name}`>{{unit.name}}</option>
+                            }
+                        </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="unit-category-input" class="form-label">Unit Category</label>
+
+                        <select class="form-select" id="unit-category-input" formControlName="unitCategory">
+                            <option value="">Select Block</option>
+                            @for(category of unitCategory; track $index) {
+                                <option value=`{category.name}`>{{category.name}}</option>
+                            }
+                        </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label for="unit-description-input" class="form-label">Unit Description</label>
+                                <textarea class="form-control" id="unit-description-input" rows="3" formControlName="unit-description-input" placeholder="Enter Description" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label for="remarks-input" class="form-label">Remarks<span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="remarks-input" rows="3" formControlName="remarks" placeholder="Enter Remarks" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="button" class="btn btn-ghost-danger" (click)="addProperty.hide()"><i class="bi bi-x-lg align-baseline me-1"></i> Close</button>
+                        <button type="submit" class="btn btn-primary" id="add-btn">Post</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body mt-3">
+                            <div class="table-responsive table-card p-3">
+                                <table class="table table-centered align-middle table-custom-effect table-nowrap mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th scope="col">Block</th>
+                                            <th scope="col">Unit No</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Description</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list form-check-all" id="invoice-list-data">
+                                        <tr>
+                                            <td class="id">Block-C</td>
+                                            <td class="name">C-1</td>
+                                            <td class="description text-clamp">Flat</td>
+                                            <td class="description text-clamp">3 bed, suppe luxury</td>
+                                            <td>
+                                                <ul class="d-flex gap-2 list-unstyled mb-0">
+                                                    <li>
+                                                        <a routerLink="/real-estate/property-overview"
+                                                            class="btn btn-subtle-primary btn-icon btn-sm "><i
+                                                                class="ph ph-eye"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);"
+                                                            class="btn btn-subtle-secondary btn-icon btn-sm edit-item-btn"><i
+                                                                class="ph ph-pencil"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="id">Block-C</td>
+                                            <td class="name">C-1</td>
+                                            <td class="description text-clamp">Flat</td>
+                                            <td class="description text-clamp">3 bed, suppe luxury</td>
+                                            <td>
+                                                <ul class="d-flex gap-2 list-unstyled mb-0">
+                                                    <li>
+                                                        <a routerLink="/real-estate/property-overview"
+                                                            class="btn btn-subtle-primary btn-icon btn-sm "><i
+                                                                class="ph ph-eye"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);"
+                                                            class="btn btn-subtle-secondary btn-icon btn-sm edit-item-btn"><i
+                                                                class="ph ph-pencil"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="id">Block-C</td>
+                                            <td class="name">C-1</td>
+                                            <td class="description text-clamp">Flat</td>
+                                            <td class="description text-clamp">3 bed, suppe luxury</td>
+                                            <td>
+                                                <ul class="d-flex gap-2 list-unstyled mb-0">
+                                                    <li>
+                                                        <a routerLink="/real-estate/property-overview"
+                                                            class="btn btn-subtle-primary btn-icon btn-sm "><i
+                                                                class="ph ph-eye"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);"
+                                                            class="btn btn-subtle-secondary btn-icon btn-sm edit-item-btn"><i
+                                                                class="ph ph-pencil"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody><!-- end tbody -->
+                                </table><!-- end table -->
+                
+                                <div class="noresult" style="display: none;">
+                                    <div class="text-center py-4">
+                                        <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                                        <h5 class="mt-2">Sorry! No Result Found</h5>
+                                        <p class="text-muted mb-0">We've searched more than 6+ invoice We did not find any invoice
+                                            for you search.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal-content -->
+    </div>
+</div>

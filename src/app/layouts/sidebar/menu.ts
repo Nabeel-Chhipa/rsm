@@ -396,7 +396,7 @@ export const MENU: MenuItem[] = [
             {
                 id: 50,
                 label: 'MENUITEMS.ADMIN.LIST.PROJECTS',
-                link: '/',
+                link: '/reports',
                 parentId: 47
             },
             {
@@ -418,7 +418,7 @@ export const MENU: MenuItem[] = [
             {
                 id: 53,
                 label: 'MENUITEMS.REPORTS_ANALYTICS.LIST.REPORTS',
-                link: '/',
+                link: '/reportsAnalytics/reports',
                 parentId: 52
             },
             {

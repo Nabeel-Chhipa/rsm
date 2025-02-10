@@ -21,7 +21,7 @@ import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 export class PropertiesComponent {
   files: File[] = [];
   page: number = 1
-  selectedPropertyType: string = "Villa"
+  selectedPropertyType: string = "House"
   // bread crumb items
   breadCrumbItems!: Array<{}>;
   productslist: any
@@ -30,73 +30,33 @@ export class PropertiesComponent {
   submitted = false;
   products: any;
   endItem: any;
-  propertyType = [
+  unitType = [
     {
       'id': 1,
-      'name': 'Residential Appartments',
+      'name': 'House',
     },
     {
       'id': 2,
-      'name': 'Offices',
+      'name': 'Flat',
     },
     {
       'id': 3,
-      'name': 'Shopping Mall',
+      'name': 'Portion',
     },
     {
       'id': 4,
-      'name': 'Shopping Mall & Residential',
+      'name': 'Shop',
     },
     {
       'id': 5,
-      'name': 'Housing Society',
-    },
-  ];
-  blocks = [
-    {
-      'id': 1,
-      'name': 'Flats'
-    },
-    {
-      'id': 2,
-      'name': 'Shops'
-    },
-    {
-      'id': 3,
-      'name': 'Offices'
-    },
-    {
-      'id': 4,
-      'name': 'Parking'
-    }
-  ]
-  blockType = [
-    {
-      'id': 1,
-      'name': 'House'
-    },
-    {
-      'id': 2,
-      'name': 'Flats'
-    },
-    {
-      'id': 3,
-      'name': 'Portion'
-    },
-    {
-      'id': 4,
-      'name': 'Shop'
-    },
-    {
-      'id': 5,
-      'name': 'Show room'
+      'name': ' Showroom',
     },
     {
       'id': 6,
-      'name': 'Office'
-    }
-  ]
-  blockCategory = [
+      'name': ' Office',
+    },
+  ];
+  unitCategory = [
     {
       'id': 1,
       'name': 'Studio Appartment'
@@ -107,25 +67,7 @@ export class PropertiesComponent {
     },
     {
       'id': 3,
-      'name': 'Luxury Appartment'
-    },
-    {
-      'id': 4,
-      'name': 'Penthouse'
-    }
-  ]
-  units = [
-    {
-      'id': 1,
-      'name': 'Studio Appartment'
-    },
-    {
-      'id': 2,
-      'name': 'Duplex'
-    },
-    {
-      'id': 3,
-      'name': 'Luxury Appartment'
+      'name': ' Luxury Appartment'
     },
     {
       'id': 4,

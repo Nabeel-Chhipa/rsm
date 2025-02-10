@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 import { DecimalPipe } from '@angular/common';
 import * as ApexCharts from 'apexcharts';
@@ -7,6 +7,9 @@ import { fetchfeedbackdataData, fetchpropertydataData, fetchrentproprtydataData,
 import { selectData, selectfeedData, selectrentData, selectsaleData } from 'src/app/store/RealEstate/realEstate-selector';
 import { fetchInvoiceData } from 'src/app/store/Invoices/invoices.action';
 import { Router } from '@angular/router';
+import { ModalDirective } from 'ngx-bootstrap/modal';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
 
 @Component({
   selector: 'app-index',
@@ -42,14 +45,61 @@ export class IndexComponent {
   invoiceCard: any;
 
   sortValue: any = 'Property Name'
+  propertyForm!: UntypedFormGroup;
+  unitType = [
+    {
+      'id': 1,
+      'name': 'House',
+    },
+    {
+      'id': 2,
+      'name': 'Flat',
+    },
+    {
+      'id': 3,
+      'name': 'Portion',
+    },
+    {
+      'id': 4,
+      'name': 'Shop',
+    },
+    {
+      'id': 5,
+      'name': ' Showroom',
+    },
+    {
+      'id': 6,
+      'name': ' Office',
+    },
+  ];
+  unitCategory = [
+    {
+      'id': 1,
+      'name': 'Studio Appartment'
+    },
+    {
+      'id': 2,
+      'name': 'Duplex'
+    },
+    {
+      'id': 3,
+      'name': ' Luxury Appartment'
+    },
+    {
+      'id': 4,
+      'name': 'Penthouse'
+    }
+  ]
 
 
-  constructor(public store: Store, public router: Router) {
+  constructor(public store: Store, public router: Router, private formBuilder: UntypedFormBuilder) {
     var date = new Date();
     var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
     var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
     this.currentDate = { from: firstDay, to: lastDay }
   }
+
+@ViewChild('addProperty', { static: false }) addProperty?: ModalDirective;
 
   ngOnInit(): void {
     /**
@@ -100,11 +150,48 @@ export class IndexComponent {
       this.invoiceCard = data;
     });
 
+    this.propertyForm = this.formBuilder.group({
+          id: [''],
+          title: ['', [Validators.required]],
+          type: ['', [Validators.required]],
+          bedroom: ['', [Validators.required]],
+          bathroom: ['', [Validators.required]],
+          area: ['', [Validators.required]],
+          price: ['', [Validators.required]],
+          agent: ['', [Validators.required]],
+          requirement: ['', [Validators.required]],
+          location: ['', [Validators.required]],
+          img: ['']
+        });
+
   }
 
   // Change Tab Content
   changeTab(tab: string) {
     this.currentTab = tab;
+  }
+
+  // File Upload
+  public dropzoneConfig: DropzoneConfigInterface = {
+    clickable: true,
+    addRemoveLinks: true,
+    previewsContainer: false,
+  };
+
+  uploadedFiles: any[] = [];
+
+  // File Upload
+  imageURL: any;
+  onUploadSuccess(event: any) {
+    setTimeout(() => {
+      this.uploadedFiles.push(event[0]);
+      this.propertyForm.controls['img'].setValue(event[0].dataURL);
+    }, 0);
+  }
+
+  // File Remove
+  removeFile(event: any) {
+    this.uploadedFiles.splice(this.uploadedFiles.indexOf(event), 1);
   }
 
   // Chart Colors Set
@@ -937,5 +1024,15 @@ export class IndexComponent {
 
   gotoCustomerFeedback() {
     this.router.navigate(['/communities/feedback'])
+  }
+
+  gotoAddCommunities() {
+    this.router.navigate(['/communities/add-communities'])
+  }
+
+  
+
+  showAddProperty() {
+    this.addProperty?.show();
   }
 }

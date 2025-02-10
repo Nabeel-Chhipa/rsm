@@ -94,7 +94,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div>
                                     <label class="form-label" for="totalamountInput">Total Amount</label>
-                                    <input type="text" class="form-control" id="totalamountInput" formControlName="total" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" placeholder="$0.00" placeholder="$0.00" readonly>
+                                    <input type="text" class="form-control" id="totalamountInput" formControlName="total" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" placeholder="Rs. 0.00" placeholder="Rs. 0.00" readonly>
                                 </div>
                             </div>
                             <!--end col-->
@@ -130,6 +130,13 @@
                                     <div class="invalid-feedback">
                                         Please enter a tax number
                                     </div>
+                                </div>
+                                <div class="mb-2">
+                                    <select class="form-control" data-choices data-choices-search-false data-choices-removeItem id="choices-payment-type">
+                                        <option value="" selected disabled>Expense type</option>
+                                        <option value="">Cash</option>
+                                        <option value="Cash on Delivery">Cash on Delivery</option>
+                                    </select>
                                 </div>
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="same" name="same" formControlName="same" [ngClass]="{ 'is-invalid': submitted && form['same'].errors }">
@@ -189,10 +196,10 @@
                                         <div class="d-flex currency-select input-light align-items-center">
                                             Rate
                                             <select class="form-selectborder-0 bg-light" id="choices-payment-currency" (change)="otherPayment($event)">
-                                                <option value="$">($)</option>
-                                                <option value="£">(£)</option>
+                                                <option value="Rs.">Rs.</option>
+                                                <!-- <option value="£">(£)</option>
                                                 <option value="₹">(₹)</option>
-                                                <option value="€">(€)</option>
+                                                <option value="€">(€)</option> -->
                                             </select>
                                         </div>
                                     </th>
@@ -229,7 +236,7 @@
                                     </td>
                                     <td class="text-end">
                                         <div>
-                                            <input type="number" class="form-control invoice-product-line-price" id="productPrice-{{$index}}" formControlName="price" placeholder="$0.00" readonly>
+                                            <input type="number" class="form-control invoice-product-line-price" id="productPrice-{{$index}}" formControlName="price" placeholder="Rs. 0.00" readonly>
                                         </div>
                                     </td>
                                     <td class="product-removal">
@@ -257,32 +264,32 @@
                                                 <tr>
                                                     <th scope="row">Sub Total</th>
                                                     <td style="width:150px;">
-                                                        <input type="text" class="form-control" id="cart-subtotal" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" formControlName="subtotal" placeholder="$0.00">
+                                                        <input type="text" class="form-control" id="cart-subtotal" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" formControlName="subtotal" placeholder="Rs. 0.00">
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Estimated Tax (18%)</th>
                                                     <td>
-                                                        <input type="text" class="form-control" id="cart-tax" formControlName="tax" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" placeholder="$0.00" readonly>
+                                                        <input type="text" class="form-control" id="cart-tax" formControlName="tax" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" placeholder="Rs. 0.00" readonly>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Discount <small class="text-muted">(STEEX30)</small>
                                                     </th>
                                                     <td>
-                                                        <input type="text" class="form-control" id="cart-discount" formControlName="discount" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" placeholder="$0.00" readonly>
+                                                        <input type="text" class="form-control" id="cart-discount" formControlName="discount" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" placeholder="Rs. 0.00" readonly>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Shipping Charge</th>
                                                     <td>
-                                                        <input type="text" class="form-control" id="cart-shipping" formControlName="charge" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" placeholder="$0.00" readonly>
+                                                        <input type="text" class="form-control" id="cart-shipping" formControlName="charge" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" placeholder="Rs. 0.00" readonly>
                                                     </td>
                                                 </tr>
                                                 <tr class="border-top border-top-dashed">
                                                     <th scope="row">Total Amount</th>
                                                     <td>
-                                                        <input type="text" class="form-control" id="cart-total" formControlName="total" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" placeholder="$0.00" readonly>
+                                                        <input type="text" class="form-control" id="cart-total" formControlName="total" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" placeholder="Rs. 0.00" readonly>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -299,11 +306,8 @@
                             <div class="mb-2">
                                 <label for="choices-payment-type" class="form-label text-muted text-uppercase fw-semibold">Payment Details</label>
                                 <select class="form-control" data-choices data-choices-search-false data-choices-removeItem id="choices-payment-type">
-                                    <option value="">Payment Method</option>
-                                    <option value="Mastercard">Mastercard</option>
-                                    <option value="Credit Card">Credit Card</option>
-                                    <option value="Visa">Visa</option>
-                                    <option value="Paypal">Paypal</option>
+                                    <option value="">Cash</option>
+                                    <option value="Cash on Delivery">Cash on Delivery</option>
                                 </select>
                             </div>
                             <div class="mb-2">
@@ -313,7 +317,7 @@
                                 <input class="form-control" type="text" id="cardNumber" placeholder="xxxx xxxx xxxx xxxx">
                             </div>
                             <div>
-                                <input class="form-control" type="text" id="amountTotalPay" formControlName="total" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" placeholder="$0.00" placeholder="$0.00" readonly>
+                                <input class="form-control" type="text" id="amountTotalPay" formControlName="total" mask="separator.2" thousandSeparator="," decimalMarker="." [allowNegativeNumbers]="false" [prefix]="paymentSign" placeholder="Rs. 0.00" readonly>
                             </div>
                         </div>
                         <!--end col-->

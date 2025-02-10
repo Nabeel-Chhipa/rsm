@@ -5,7 +5,7 @@ const property = [
         img: 'assets/images/real-estate/img-01.jpg',
         name: 'Ocean Residency',
         address: 'Clifton Block 2, Karachi',
-        agentname: 'Ali Raza',
+        resident: 'Ali Raza',
         price: 'Rs.2451.39',
         status: 'Owner'
     },
@@ -15,7 +15,7 @@ const property = [
         img: 'assets/images/real-estate/img-02.jpg',
         name: 'DHA Elite Villas',
         address: 'DHA Phase 6, Karachi',
-        agentname: 'Ahmed Khan',
+        resident: 'Ahmed Khan',
         price: 'Rs.2451.20',
         status: 'Landlord'
     },
@@ -25,7 +25,7 @@ const property = [
         img: 'assets/images/real-estate/img-03.jpg',
         name: 'Bahria Icon Tower',
         address: 'Bahria Town Karachi, Jinnah Avenue',
-        agentname: 'Usman Saeed',
+        resident: 'Usman Saeed',
         price: 'Rs.1249.99',
         status: 'Tenant'
     },
@@ -35,7 +35,7 @@ const property = [
         img: 'assets/images/real-estate/img-04.jpg',
         name: 'Gulshan Heights',
         address: 'Gulshan-e-Iqbal Block 13D, Karachi',
-        agentname: 'Salman Ahmed',
+        resident: 'Salman Ahmed',
         price: 'Rs.3495.76',
         status: 'Landlord'
     },
@@ -45,7 +45,7 @@ const property = [
         img: 'assets/images/real-estate/img-05.jpg',
         name: 'North View Residency',
         address: 'North Nazimabad Block H, Karachi',
-        agentname: 'Faisal Siddiqui',
+        resident: 'Faisal Siddiqui',
         price: 'Rs.2579.31',
         status: 'Owner'
     },
@@ -55,7 +55,7 @@ const property = [
         img: 'assets/images/real-estate/img-06.jpg',
         name: 'Korangi Business Hub',
         address: 'Korangi Industrial Area, Karachi',
-        agentname: 'Bilal Hassan',
+        resident: 'Bilal Hassan',
         price: 'Rs.1478.00',
         status: 'Tenant'
     }
